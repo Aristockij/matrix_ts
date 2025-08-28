@@ -1,0 +1,130 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.title {
+  margin-bottom: 25px;
+  justify-content: flex-end;
+
+  @include breakpoint.devices {
+    margin-bottom: 25px;
+
+    position: absolute;
+    right: 20px;
+  }
+
+  h2 {
+    padding-top: 4px;
+  }
+}
+
+.swiper {
+  &__title {
+    width: 200px;
+    font-size: 48px;
+
+    @include breakpoint.devices {
+      font-size: 32px;
+      width: 100px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+
+    @include breakpoint.devices {
+      display: block;
+      padding: 0 0;
+    }
+  }
+
+  &__quoutes {
+    &__desctop {
+      width: 37px;
+      margin-left: auto;
+      margin-right: 24px;
+
+      @include breakpoint.devices {
+        display: none;
+      }
+    }
+
+    &__mobile {
+      display: none;
+      margin-right: 16px;
+
+      @include breakpoint.devices {
+        min-width: 18px;
+        display: block;
+      }
+    }
+  }
+}
+.slide {
+  background: variables.$bg-card-even;
+  padding: 23px 20px 20px 27px;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // max-width: 571px;
+  margin-left: auto;
+
+  @include breakpoint.devices {
+    display: flex;
+    flex-direction: row;
+    padding: 23px 20px 20px 18px;
+  }
+
+  &__wrap {
+    width: 274px;
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+}
+
+.slider {
+  &__wrapper {
+    padding: 0;
+    max-width: 571px;
+    margin-left: 0;
+    margin-right: 0;
+
+    @include breakpoint.devices {
+      padding: 0 0;
+      max-width: 100%;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.person {
+  display: flex;
+  align-items: center;
+
+  &__photo {
+    display: flex;
+    margin-right: 6px;
+    img {
+      display: block;
+      &:nth-child(2) {
+        transform: translateX(-6px);
+      }
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

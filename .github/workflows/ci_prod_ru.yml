@@ -1,0 +1,83 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push Docker image (RU)
+        run: |
+          docker buildx build \
+            --build-arg NEXT_PUBLIC_BASEURL="${{ secrets.NEXT_PUBLIC_BASEURL }}" \
+            --build-arg BUILD_TYPE=ru \
+            --platform linux/amd64 \
+            -t aristockij/taro-matrix-ru:latest \
+            --push \
+            .
+
+      - name: Build and push Docker image (EN)
+        run: |
+          docker buildx build \
+            --build-arg NEXT_PUBLIC_BASEURL="${{ secrets.NEXT_PUBLIC_BASEURL_EN }}" \
+            --build-arg BUILD_TYPE=en \
+            --platform linux/amd64 \
+            -t aristockij/taro-matrix-en:latest \
+            --push \
+            .
+
+      - name: Deploy to VPS
+        env:
+          PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_PROD }}
+          UKASSA_ID_RU: ${{ secrets.UKASSA_ID }}
+          UKASSA_SECRET_RU: ${{ secrets.UKASSA_SECRET }}
+          STRIPE_SECRET_EN: ${{ secrets.STRIPE_SECRET }}
+          STRIPE_WHSEC_EN: ${{ secrets.STRIPE_WEBHOOK_SECRET }}
+        run: |
+          # Настроим SSH для подключения
+          mkdir -p ~/.ssh
+          echo "$PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          # Подключимся к серверу и перезапустим контейнер
+          ssh -o StrictHostKeyChecking=no root@80.242.58.250 <<EOF
+            set -e
+            mkdir -p /www/frontend/mystic_env/ru /www/frontend/mystic_env/en
+
+            printf "STRIPE_SECRET=%s\nSTRIPE_WEBHOOK_SECRET=%s\nPUBLIC_URL=https://futurerevealers.com\nBUILD_TYPE=en\n" \
+              "${STRIPE_SECRET_EN}" "${STRIPE_WHSEC_EN}" > /www/frontend/mystic_env/en/.env.en
+
+            
+            printf "UKASSA_ID=%s\nUKASSA_SECRET=%s\nPUBLIC_URL=https://mystic-uslugi.ru\nBUILD_TYPE=ru\n" \
+              "${UKASSA_ID_RU}" "${UKASSA_SECRET_RU}" > /www/frontend/mystic_env/ru/.env.ru
+
+            cd /www/frontend/
+
+            docker pull aristockij/taro-matrix-ru:latest &
+            docker pull aristockij/taro-matrix-en:latest &
+
+            docker pull nginx:latest &
+            wait
+
+            docker compose stop
+            docker compose up -d
+            
+          EOF
+
+          rm -f ~/.ssh/id_rsa

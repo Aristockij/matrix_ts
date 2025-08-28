@@ -1,0 +1,156 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.name {
+  margin-bottom: 0;
+}
+
+.date {
+  color: variables.$text__gray;
+  margin-bottom: 5px;
+}
+.btn {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+}
+
+.dropdown__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-bottom: 24px;
+}
+
+.section__person {
+  @include breakpoint.devices {
+    flex-direction: column;
+  }
+}
+
+.chakra {
+  &__wrap {
+    gap: 15px;
+    @include breakpoint.devices {
+      padding: 37px 10px 33px 10px;
+      flex-direction: column;
+    }
+  }
+  &__img {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+
+    @include breakpoint.devices {
+      width: 334px;
+      height: auto;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-self: stretch;
+      justify-content: center;
+      border-radius: 24px;
+      background-color: #f2f6ff;
+
+      @include breakpoint.devices {
+        padding-top: 10px;
+        width: 100%;
+        min-height: calc(100vw - 65px);
+        align-content: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.table {
+  &__wrap {
+    & > div {
+      padding: 8px 24px;
+      border-bottom: 1px solid variables.$color-white;
+      @include breakpoint.devices {
+        padding: 9px 8px;
+      }
+    }
+
+    & > div:nth-child(1) {
+      padding: 16px 24px;
+
+      @include breakpoint.devices {
+        padding: 16px 8px;
+      }
+    }
+
+    & > div:last-child {
+      padding: 16px 24px;
+
+      @include breakpoint.devices {
+        padding: 16px 8px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__title,
+  &__row,
+  &__num {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__title {
+    & > div {
+      flex: 1;
+      text-align: center;
+    }
+
+    & > div:nth-child(1) {
+      flex: 2.1;
+      text-align: left;
+
+      @include breakpoint.devices {
+        flex: 1.4;
+      }
+    }
+  }
+
+  &__num {
+    flex: 1.7;
+    align-items: center;
+    @include breakpoint.devices {
+      flex: 2.4;
+    }
+
+    & > div {
+      flex: 1;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+
+  &__left {
+    flex: 1;
+
+    span {
+      display: block;
+    }
+
+    span:nth-child(1) {
+      font-weight: 500;
+    }
+
+    span:nth-child(2) {
+      color: variables.$text__gray;
+      font-size: 12px;
+      line-height: 1.3;
+      max-width: 120px;
+    }
+  }
+}

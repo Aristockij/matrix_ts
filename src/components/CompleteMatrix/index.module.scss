@@ -1,0 +1,42 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.wrap {
+  width: 618px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  @include breakpoint.devices {
+    width: calc(100vw - 90px);
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  img {
+    width: 147px;
+  }
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  max-width: 340px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+}

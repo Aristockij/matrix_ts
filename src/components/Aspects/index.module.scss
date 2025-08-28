@@ -1,0 +1,77 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.aspect {
+  &__main__title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 42px auto;
+
+    @include breakpoint.devices {
+      margin-bottom: 30px;
+      max-width: 290px;
+    }
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+
+    @include breakpoint.devices {
+      margin-bottom: 30px;
+      flex-direction: column;
+    }
+
+    & > div {
+      flex: 1;
+    }
+
+    & > div:nth-child(2) {
+      background-color: variables.$bg-card-even;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    background: variables.$bg-card-odd;
+    padding: 11px 11px 18px 18px;
+    border-radius: 24px;
+
+    p {
+      font-size: 12px;
+      color: variables.$text__gray;
+    }
+  }
+
+  &__num {
+    font-size: 100px;
+    margin-bottom: 37px;
+
+    @include breakpoint.devices {
+      font-size: 80px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.005em;
+
+    @include breakpoint.devices {
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    max-width: 340px;
+    text-align: center;
+    line-height: 50px;
+  }
+}

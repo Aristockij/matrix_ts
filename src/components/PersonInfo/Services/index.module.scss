@@ -1,0 +1,11 @@
+@use "../../../style/functions/responsive.scss";
+@use "../../../style/mixins/breakpoint.scss";
+
+.title {
+  @include breakpoint.devices {
+    margin-bottom: 10px;
+    br {
+      display: none;
+    }
+  }
+}

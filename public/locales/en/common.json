@@ -1,0 +1,503 @@
+{
+  "useLocaleLabel": { "locale": "en" },
+  "header": {
+    "navigation": {
+      "0": "Tarot",
+      "1": "Matrix of Destiny",
+      "2": "Tariffs",
+      "3": "Questions",
+      "4": "Blog"
+    },
+    "href": {
+      "0": "#tarot",
+      "1": "#matrix",
+      "2": "#tariffs",
+      "3": "#faq",
+      "4": "#blog"
+    },
+    "loginIn__btn": "Login"
+  },
+  "Matrix": {
+    "matrix__btn": {
+      "0": "Personal Matrix",
+      "1": "Compatibility",
+      "2": "Finance"
+    },
+    "PersonalMatrix": {
+      "title": "Matrix of Destiny",
+      "subtitle": "The online calculator allows you to automatically calculate the Matrix and gives a complete breakdown of each energy"
+    },
+
+    "Compatibility": {
+      "title": "Compatibility",
+      "subtitle": "The online calculator allows you to automatically calculate the Matrix and provides a complete explanation of compatibility",
+      "firstPartner": {
+        "title": "First partner",
+        "name": "First name",
+        "date": "Date of birth"
+      },
+      "secondPartner": {
+        "title": "Second partner",
+        "name": "First name",
+        "date": "Date of birth"
+      },
+      "btn": "Calculate"
+    },
+    "Finance": {
+      "title": "Finance",
+      "subtitle": "The online calculator allows you to automatically calculate the Matrix and gives a complete breakdown of monetary energy"
+    },
+    "form": {
+      "btnFemale": "Female",
+      "btnMale": "Male",
+      "firstName": "First name",
+      "date": "Date of birth",
+      "submit": "Calculate"
+    },
+    "popup": {
+      "title": "Personal Matrix is ready",
+      "subtitle": "To gain access to the calculation, purchase a subscription",
+      "btn": "I want to buy a spread",
+      "quantity": "left"
+    }
+  },
+  "YesNo": {
+    "title": "Tarot Spreads",
+    "treecards_step_1": "Ask a question and the cards will tell you what to do next",
+    "treecards_step_2": "Select 3 random cards from the deck",
+    "taro_step_2": "Select 5 random cards from the decks",
+    "textarea_placeholder": "Write your question here..",
+    "btns": {
+      "0": "Yes or No",
+      "1": "Three cards",
+      "2": "5 cards"
+    },
+    "btn": "Find out the answer",
+    "YesOrNo": {
+      "title": "Fortune telling Yes-No",
+      "subtitle": "Ask a yes or no question and click the button below",
+      "popup": {
+        "no": {
+          "title": "No!",
+          "subtitle": "Hanged Man card: Fatigue and a desire to burn all these damn bridges will come over you."
+        },
+        "yes": {
+          "title": "Yes!",
+          "subtitle": "Card Page of Posokhov: Be honest with yourself and those around you, misconceptions and lies will not lead to good"
+        },
+        "submit": "Another question"
+      }
+    },
+    "ThreeCard": {
+      "title": "Three cards",
+      "subtitle": "Ask a question and the cards will tell you what to do next",
+      "popup": {
+        "title": "Three Cards layout is ready",
+        "subtitle": "To gain access to the spread, purchase a subscription",
+        "submit": "I want to buy a spread",
+        "submit_left": "Осталось"
+      }
+    },
+    "Tarot": {
+      "title": "Tarot Spread",
+      "subtitle": "Ask a question and the cards will tell you what to do next",
+      "popup": {
+        "title": "Tarot spread is ready",
+        "subtitle": "To gain access to the spread, purchase a subscription",
+        "submit": "I want to buy a spread"
+      }
+    }
+  },
+  "Aspects": {
+    "title": "What aspects of life can be improved with the help of fortune telling?",
+    "1": {
+      "title": "Destiny",
+      "subtitle": "Life purpose of destiny and what tasks remain to be accomplished in this life"
+    },
+    "2": {
+      "title": "Finance",
+      "subtitle": "Accelerate the path to financial independence and wealth, learn about financial opportunities and resources"
+    },
+    "3": {
+      "title": "Talents",
+      "subtitle": "Learn about your natural talents, as well as how to develop them and direct them in the right direction"
+    },
+    "btn": "I want to buy a spread"
+  },
+  "Comments": {
+    "title": "Customer Reviews",
+    "1": {
+      "text": "The Matrix of&nbsp;Destiny has completely changed my&nbsp;outlook on&nbsp;life! Through this analysis, I&nbsp;was able to&nbsp;understand my&nbsp;main strengths and learned to&nbsp;better cope with challenges. Would recommend to&nbsp;anyone seeking deep self-knowledge and direction in&nbsp;life.",
+      "author": "Anna, 26 years old"
+    },
+    "2": {
+      "text": "This matrix is a real breakthrough! She helped me&nbsp;discover my&nbsp;hidden talents and showed me&nbsp;what direction&nbsp;I should take next. Now I&nbsp;know exactly what steps&nbsp;I need to&nbsp;take to&nbsp;achieve my&nbsp;goals.",
+      "author": "Elena, 32 years old"
+    },
+    "3": {
+      "text": "After consulting with using the Destiny Matrix, I&nbsp;felt incredibly relieved and confident in&nbsp;my&nbsp;decisions. This tool gave me&nbsp;clarity and helped me&nbsp;plan for the future on&nbsp;a&nbsp;more conscious level. Five stars without a&nbsp;doubt!",
+      "author": "Dmitry, 41 years old"
+    },
+    "4": {
+      "text": "This matrix is&nbsp;a&nbsp;real breakthrough! She helped me&nbsp;discover my&nbsp;hidden talents and showed me&nbsp;what direction&nbsp;I should take next. Now I&nbsp;know exactly what steps&nbsp;I need to&nbsp;take to&nbsp;achieve my&nbsp;goals.",
+      "author": "Elena, 32 years old"
+    },
+    "5": {
+      "text": "After consulting with using the Destiny Matrix, I&nbsp;felt incredibly relieved and confident in&nbsp;my&nbsp;decisions. This tool gave me&nbsp;clarity and helped me&nbsp;plan for the future on&nbsp;a&nbsp;more conscious level. Five stars without a&nbsp;doubt!",
+      "author": "Dmitry, 41 years old"
+    },
+    "6": {
+      "text": "This matrix is a real breakthrough! She helped me&nbsp;discover my&nbsp;hidden talents and showed me&nbsp;what direction&nbsp;I should take next. Now I&nbsp;know exactly what steps&nbsp;I need to&nbsp;take to&nbsp;achieve my&nbsp;goals.",
+      "author": "Elena, 32 years old"
+    }
+  },
+  "Tariffs": {
+    "title": "Tariffs",
+    "for": {
+      "0": {
+        "title": "For myself",
+        "price": "9,65 $",
+        "list": "Personal Matrix – 1 pc. , Matrix of Finance – 1 pc. , Any Tarot layout – 1 pc."
+      },
+      "1": {
+        "title": "Family",
+        "price": "21,25 $",
+        "list": "Personal Matrix – 2 pcs. , Compatibility Matrix – 2 pcs. , Any Tarot layout – 4 pcs. , Matrix of Finance – 2 pcs."
+      },
+      "2": {
+        "title": "For two",
+        "price": "14,48 $",
+        "list": "Personal Matrix – 2 pcs. , Compatibility Matrix – 2 pcs. , Any Tarot layout – 4 pcs. "
+      }
+    },
+    "order": "Your order: ",
+    "error": "Payment failed",
+    "btn": "Select"
+  },
+  "Blog": {
+    "title": "Blog",
+    "read": "Read"
+  },
+  "FAQ": {
+    "title": "Questions",
+    "questions": {
+      "0": {
+        "title": "What is the Matrix of Destiny and what is it based on?",
+        "content": "The Matrix of&nbsp;Destiny is&nbsp;a&nbsp;personality analysis method based on&nbsp;your date of&nbsp;birth. It&nbsp;helps uncover strengths and weaknesses, soul tasks, karmic knots, and life purpose using the archetypes of&nbsp;the Major Arcana from the Tarot."
+      },
+      "1": {
+        "title": "How is the Matrix of Destiny different from a regular horoscope or numerology?",
+        "content": "Horoscopes are based on&nbsp;stars, numerology on&nbsp;numbers. The Matrix of&nbsp;Destiny uses Tarot archetypes to&nbsp;&laquo;translate&raquo; your birth date into deep meanings and life scenarios. It&nbsp;offers a&nbsp;more symbolic and psychologically accurate picture."
+      },
+      "2": {
+        "title": "I don’t believe in magic. Is this esotericism or psychology?",
+        "content": "This isn’t magic—it's a tool for self-discovery. It works with archetypes and psychoenergetics, which are easy to grasp even for skeptics. Many see the Matrix as a metaphorical way to view themselves from a new perspective."
+      },
+      "3": {
+        "title": "What will I get when I order a Matrix reading?",
+        "content": "You&rsquo;ll receive a&nbsp;personalized analysis of&nbsp;your energies, life tasks, talents, ancestral influences, and insights into money, relationships, and self-realization. It&rsquo;s not a&nbsp;&laquo;prediction&raquo; but a&nbsp;deep guide toward conscious living."
+      },
+      "4": {
+        "title": "How accurate and reliable is it?",
+        "content": "The method is&nbsp;based on&nbsp;years of&nbsp;practice and thousands of&nbsp;readings. People often find explanations for their actions, fears, and desires in&nbsp;the Matrix. It&rsquo;s not an&nbsp;absolute truth, but a&nbsp;highly accurate &quot;map&quot;&mdash;its value depends on&nbsp;your readiness to&nbsp;listen to&nbsp;yourself."
+      },
+      "5": {
+        "title": "Can I get a reading for my child?",
+        "content": "Yes, absolutely. A&nbsp;child&rsquo;s Matrix helps understand their tendencies, emotional needs, and talents. It&rsquo;s especially helpful for parents who want to&nbsp;support their child without pressure."
+      },
+      "6": {
+        "title": "How quickly will I get the results after placing an order?",
+        "content": "As&nbsp;soon as&nbsp;you complete your order and payment, you&rsquo;ll get immediate access to&nbsp;your Matrix and its interpretations. No&nbsp;waiting&mdash;everything is&nbsp;automatic and convenient."
+      }
+    }
+  },
+  "Distribution": {
+    "title": "Newsletter",
+    "form": {
+      "name": "First name",
+      "mail": "Email",
+      "submit": "Subscribe",
+      "description": "By clicking the button, I agree to the processing of personal data",
+      "error__name": "enter name",
+      "error__mail": "enter mail",
+      "match__mail": "mail must contain the @ and ."
+    },
+    "subscribe": {
+      "message": "Thanks for subscribing!",
+      "submessage": "Now you are aware of the latest news and promotions, expect interesting updates from us."
+    }
+  },
+  "Footer": {
+    "person": {
+      "ip": "IP Firsanov Ivan Alexandrovich",
+      "inn": "TIN 780733499246",
+      "og": "OGRNIP 322784700234631"
+    },
+    "docs": {
+      "of": "Offer",
+      "polcy": "Privacy Policy",
+      "sogl": "Processing of personal data"
+    }
+  },
+  "Enter": {
+    "enter": "Login",
+    "registration": "Sign up",
+
+    "mail": "Email",
+    "pass": "Password",
+    "passAgain": "Password again",
+    "submit": "Login",
+    "singUp": "Sign up",
+
+    "signin_error": "mail or password incorrect",
+    "match__mail": "mail must contain the @ and .",
+    "min_pass": "Minimum 8 characters",
+    "email__match": " - this email is already taken",
+    "error__mail": "enter email",
+    "error__pass": "enter password",
+    "match__password": "Passwords must match"
+  },
+  "Profile": {
+    "nav": "Personal information , Calculations , Order history , Connected services ",
+    "title": "Personal information",
+    "form__title": "Your personal data",
+    "partner__title": "Partner's personal data",
+    "btn__female": "Female",
+    "btn__male": "Male",
+
+    "name": "First name",
+    "date": "Date of birth",
+    "phone": "Number",
+    "email": "Email",
+    "partner__name": "Partner's First Name",
+    "partner__date": "Partner's date of birth",
+    "submit": "Save",
+    "name__error": "enter name",
+    "date__error": "enter date",
+    "phone__error": "enter phone",
+    "phone__match": "Invalid phone number format.",
+    "email__error": "enter email",
+    "email__match": "mail must contain the @ and .",
+    "logout": "logout",
+
+    "Calculation": {
+      "title": "Your calculations",
+
+      "tarot": "Tarot spread",
+      "threeCard": "Spread Three cards",
+      "sovmest": "Compatibility",
+      "finance": "Matrix of Finance",
+      "personMatrix": "Personal matrix"
+    },
+
+    "Order": {
+      "title": "Order history",
+      "date": "Decoding one date"
+    },
+
+    "Services": {
+      "title": "Connected services",
+      "transcripts": "Transcripts available",
+      "period": "Validity period",
+
+      "personMatrix": "Personal Matrix for a month",
+      "threeCard": "Three cards for a month",
+      "tarot": "Tarot Spread for the month",
+      "finance": "Finance for the month",
+      "matrix": "Matrix for a month",
+      "matrixSovmest": "ompatibility Matrix"
+    }
+  },
+
+  "Tarot": {
+    "title": "Tarot spread",
+    "subtitle": "A Tarot Spread will help clarify your situation and give recommendations for further action.",
+    "from": "from",
+    "mockInfo": {
+      "0": {
+        "title": "First card: Past - Jester",
+        "text": "This card symbolizes new beginnings, freedom and spontaneity. There were times in your past when you boldly stepped into the unknown, not afraid to take risks. This time was filled with optimism and openness to new opportunities. Perhaps you have started some new project or relationship that has brought you joy and inspiration. However, this card also warns that sometimes you should be careful and not forget about responsibility."
+      },
+      "1": {
+        "title": "Second card: Present - Two of Cups",
+        "text": "This card represents harmony, partnership and mutual understanding. In this current moment, you have the opportunity to form a deep connection with someone important in your life. This can be either a romantic relationship, friendship or business cooperation. The Two of Cups encourages you to open up to others, share your feelings, and seek common interests. This is a time to strengthen connections and create a positive atmosphere around you."
+      },
+      "2": {
+        "title": "Third card: Future - Wheel of Fortune",
+        "text": "The Wheel of Fortune speaks of the cyclical nature of life and changes that may occur in the future. This card symbolizes luck, change and life-changing events. Your life may soon take an unexpected turn, and this may lead to new opportunities or challenges. It's important to remember that change is a natural part of life and can bring both joy and challenge. Be prepared to adapt to new circumstances and accept them with an open heart."
+      },
+      "3": {
+        "title": "Fourth card: Future - Wheel of Fortune",
+        "text": "The Wheel of Fortune speaks of the cyclical nature of life and changes that may occur in the future. This card symbolizes luck, change and life-changing events. Your life may soon take an unexpected turn, and this may lead to new opportunities or challenges. It's important to remember that change is a natural part of life and can bring both joy and challenge. Be prepared to adapt to new circumstances and accept them with an open heart."
+      },
+      "4": {
+        "title": "Fifth card: Future - Wheel of Fortune",
+        "text": "The Wheel of Fortune speaks of the cyclical nature of life and changes that may occur in the future. This card symbolizes luck, change and life-changing events. Your life may soon take an unexpected turn, and this may lead to new opportunities or challenges. It's important to remember that change is a natural part of life and can bring both joy and challenge. Be prepared to adapt to new circumstances and accept them with an open heart."
+      }
+    }
+  },
+
+  "TreeCards": {
+    "title": "Spread Three cards",
+    "from": "from",
+    "subtitle": "A three-card spread will help clarify your situation and give recommendations for further action.",
+
+    "mockInfo": {
+      "0": {
+        "title": "First card: Past - Jester",
+        "text": "This card symbolizes new beginnings, freedom and spontaneity. There were times in your past when you boldly stepped into the unknown, not afraid to take risks. This time was filled with optimism and openness to new opportunities. Perhaps you have started some new project or relationship that has brought you joy and inspiration. However, this card also warns that sometimes you should be careful and not forget about responsibility."
+      },
+      "1": {
+        "title": "Second card: Present - Two of Cups",
+        "text": "This card represents harmony, partnership and mutual understanding. In this current moment, you have the opportunity to form a deep connection with someone important in your life. This can be either a romantic relationship, friendship or business cooperation. The Two of Cups encourages you to open up to others, share your feelings, and seek common interests. This is a time to strengthen connections and create a positive atmosphere around you."
+      },
+      "2": {
+        "title": "Third card: Future - Wheel of Fortune",
+        "text": "The Wheel of Fortune speaks of the cyclical nature of life and changes that may occur in the future. This card symbolizes luck, change and life-changing events. Your life may soon take an unexpected turn, and this may lead to new opportunities or challenges. It's important to remember that change is a natural part of life and can bring both joy and challenge. Be prepared to adapt to new circumstances and accept them with an open heart."
+      }
+    }
+  },
+
+  "Sovmestimost": {
+    "title": "Compatibility",
+    "from": "from",
+
+    "paramsMock": {
+      "0": {
+        "title": "Why did you meet?",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "1": {
+        "title": "Pair tasks",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "2": {
+        "title": "Couple Resources",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "3": {
+        "title": "What fills a couple",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "4": {
+        "title": "Money in pairs",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "5": {
+        "title": "Couple relationships",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      }
+    },
+
+    "load": "Загрузить еще"
+  },
+
+  "Finance": {
+    "title": "Matrix of Finance",
+    "from": "from",
+    "load": "Load more",
+    "paramsMock": {
+      "0": {
+        "title": "Money",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "1": {
+        "title": "Career",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "2": {
+        "title": "Self-realization",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "3": {
+        "title": "Karma and the 40 year challenge",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "4": {
+        "title": "What blocks money energy?",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "5": {
+        "title": "Programs",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      }
+    }
+  },
+
+  "PersonMatrix": {
+    "title": "Personal matrix",
+    "from": "from",
+    "load": "Load more",
+
+    "paramsMock": {
+      "0": {
+        "title": "Personal qualities",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "1": {
+        "title": "Past life",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "2": {
+        "title": "Life scenario",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "3": {
+        "title": "Money",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "4": {
+        "title": "Programs",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      },
+      "5": {
+        "title": "Parents",
+        "text": "This is a test text created to check the length of a string. It contains exactly one hundred and fifty characters to satisfy the given condition."
+      }
+    }
+  },
+
+  "Chakra": {
+    "header": {
+      "chakra": "Chakra",
+      "physic": "Physics",
+      "energy": "Energy",
+      "emotions": "Emotions"
+    },
+
+    "values": {
+      "0": {
+        "title": "Sahasrara",
+        "subtitle": "Mission"
+      },
+      "1": {
+        "title": "Ajna",
+        "subtitle": "Fate"
+      },
+      "2": {
+        "title": "Vijuha",
+        "subtitle": "Egregors"
+      },
+      "3": {
+        "title": "Anahata",
+        "subtitle": "Relationship, picture of the world"
+      },
+      "4": {
+        "title": "Manipura",
+        "subtitle": "Status, possession"
+      },
+      "5": {
+        "title": "Svadhisthana",
+        "subtitle": "Children's love, joy"
+      },
+      "6": {
+        "title": "Muladhara",
+        "subtitle": "Body, matter"
+      },
+      "7": {
+        "title": "Result",
+        "subtitle": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.inner__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+
+  @include breakpoint.devices {
+    flex-direction: column;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.input {
+  margin-bottom: 16px;
+}
+
+.submit {
+  margin-top: 6px;
+}
+
+.description {
+  font-size: 12px;
+  color: variables.$color-white;
+  padding-top: 13px;
+}
+
+.title {
+  padding-top: 5px;
+  margin-bottom: 35px;
+
+  @include breakpoint.devices {
+    margin-top: -5px;
+    margin-bottom: 30px;
+  }
+}
+
+.subscribe {
+  &__wrap {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    display: flex;
+    // flex-direction: column;
+    align-items: flex-start;
+
+    @include breakpoint.devices {
+      flex-direction: column;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+
+      @include breakpoint.devices {
+        text-align: center;
+        margin: 0 auto 32px auto;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    color: variables.$color-white;
+    max-width: 630px;
+    text-align: center;
+    line-height: 1;
+    background: variables.$bg-card-odd;
+    border-radius: 24px;
+    font-family: "Times New Roman", Times, serif;
+    padding: 20px;
+    margin-left: 50px;
+    text-align: left;
+
+    @include breakpoint.devices {
+      font-size: 24px;
+      margin-left: 0px;
+    }
+  }
+}

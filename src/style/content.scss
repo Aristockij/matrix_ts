@@ -1,0 +1,216 @@
+@use "mixins/helpers";
+@use "variables";
+@use "mixins/breakpoint";
+@use "functions/responsive.scss";
+
+body {
+  background: variables.$color-bg;
+  font-size: 16px;
+  font-family: var(--suisse-intl);
+  font-feature-settings: "calt" 0;
+}
+
+.section {
+  color: variables.$color-white;
+  border-radius: 24px;
+  padding: 80px 56px;
+  margin-bottom: 20px;
+
+  @include breakpoint.devices {
+    padding: 36px 8px;
+  }
+}
+
+.inner__section {
+  padding: 60px 56px;
+  @include breakpoint.devices {
+    padding: 36px 8px;
+  }
+}
+
+.section__wrap {
+  padding: 62px 56px 83px 56px;
+
+  @include breakpoint.devices {
+    padding: 35px 8px;
+  }
+}
+
+.section__wrap__sm {
+  padding: 40px 56px 40px 56px;
+
+  @include breakpoint.devices {
+    padding: 40px 20px 33px 20px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 20px;
+
+  @include breakpoint.devices {
+    padding: 0 12px;
+  }
+
+  &__mobile {
+    @include breakpoint.devices {
+      padding: 0 28px;
+    }
+  }
+}
+.content__container {
+  padding-top: 110px;
+
+  & > section {
+    z-index: 1;
+    position: relative;
+  }
+}
+.swiper__section {
+  padding: 62px 0 83px 0;
+
+  @include breakpoint.devices {
+    padding: 36px 0 36px 0;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+}
+
+.btn {
+  padding: 0 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: var(--suisse-intl);
+  display: inline-block;
+
+  @include helpers.hoverOpacity;
+
+  span {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 6px;
+  }
+
+  &__gradient {
+    height: 42px;
+    color: variables.$color-white;
+    border-radius: 30px;
+    font-size: 16px;
+    min-width: 160px;
+    background: linear-gradient(to left, rgb(93, 52, 241), rgb(166, 50, 221));
+  }
+
+  &__nav {
+    color: variables.$color-white;
+    font-size: 16px;
+    padding: 0 0px;
+  }
+
+  &__enter {
+    height: 46px;
+    line-height: 50px;
+  }
+
+  &__primary {
+    width: 100%;
+    height: 42px;
+    max-width: 340px;
+    line-height: 42px;
+  }
+
+  &__secondary {
+    width: 100%;
+    color: variables.$color-white;
+  }
+
+  &__red {
+    height: 42px;
+    border-radius: 30px;
+    background-color: red;
+  }
+
+  &__tertiary {
+    background: variables.$bg__btn__tertiary;
+  }
+
+  &__sm {
+    padding: 0 15px;
+    height: 38px;
+    line-height: 40px;
+    font-size: 14px;
+    border-radius: 30px;
+    background: variables.$btn__sm__bg;
+    color: variables.$color-white;
+    font-weight: 500;
+
+    @include helpers.hoverMixin(
+      variables.$btn__sm__bg__hover,
+      variables.$color__btn__hover
+    );
+
+    &.active {
+      background: variables.$color-white;
+      color: variables.$color-black;
+    }
+  }
+}
+
+.btn__border {
+  padding: 0 11px;
+  border: 1px solid variables.$border__btn;
+  border-radius: 8px;
+  color: variables.$color-white;
+  font-weight: 500;
+  height: 37px;
+  line-height: 38px;
+  display: block;
+
+  @include helpers.hoverMixin(variables.$border__btn__bg__hover);
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+h2 {
+  text-transform: none;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 1;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 20px;
+
+  @include breakpoint.devices {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+}
+
+h3 {
+  text-transform: none;
+  font-size: 30px;
+  font-family: "Times New Roman", Times, serif;
+
+  @include breakpoint.devices {
+    font-size: 24px;
+    letter-spacing: -0.005em;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}

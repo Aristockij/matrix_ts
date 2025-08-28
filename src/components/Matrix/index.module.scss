@@ -1,0 +1,72 @@
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.btns__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+
+  @include breakpoint.mobile {
+    gap: 6px;
+  }
+}
+
+.cols__gap {
+  gap: 16px;
+
+  @include breakpoint.mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+.card {
+  &__wrap {
+    flex: 1;
+    position: relative;
+
+    @include breakpoint.mobile {
+      height: 347px;
+      flex: inherit;
+    }
+  }
+
+  &__one {
+    position: absolute;
+    width: 209px;
+    height: 419px;
+    left: 75px;
+    top: -1px;
+
+    @include breakpoint.mobile {
+      top: -20;
+      left: 19px;
+    }
+  }
+
+  &__second {
+    position: absolute;
+    width: 209px;
+    height: 419px;
+    left: 154px;
+    top: 87px;
+    rotate: 20deg;
+
+    @include breakpoint.mobile {
+      left: 97px;
+      top: 60px;
+    }
+  }
+
+  &__second,
+  &__one {
+    @include breakpoint.devices {
+      width: responsive.vc(200);
+      height: auto;
+    }
+
+    @include breakpoint.mobile {
+      width: 175px;
+    }
+  }
+}

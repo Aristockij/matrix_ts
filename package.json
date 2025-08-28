@@ -4,14 +4,28 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:en": "LOCALE=en next build",
+    "build:ru": "LOCALE=ru next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "next": "15.5.2",
+    "next-intl": "^3.26.3",
+    "@stripe/react-stripe-js": "^3.9.0",
+    "@stripe/stripe-js": "^7.8.0",
+    "@tanstack/react-query": "^5.66.0",
+    "react-text-mask": "^5.5.0",
+    "axios": "^1.7.9",
+    "dayjs": "^1.11.13",
+    "formik": "^2.4.6",
+    "sass": "^1.82.0",
+    "stripe": "^18.4.0",
+    "swiper": "^11.1.15",
+    "yup": "^1.5.0",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "typescript": "^5",

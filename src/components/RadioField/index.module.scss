@@ -1,0 +1,24 @@
+@use "../../style/variables.scss";
+
+.radio {
+  &__wrap {
+    width: 100%;
+    display: block;
+
+    input {
+      display: none;
+      opacity: 0;
+      &:checked + span {
+        background-color: variables.$color-white;
+        color: variables.$color-black;
+      }
+    }
+    span {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}

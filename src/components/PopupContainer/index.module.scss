@@ -1,0 +1,44 @@
+@use "../../style/variables.scss";
+
+.popup {
+  &__layout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: variables.$color-black;
+    opacity: 0.5;
+    z-index: 9999;
+    cursor: pointer;
+  }
+
+  &__wrap {
+    background: variables.$color-bg;
+    color: variables.$color-white;
+    border-radius: 24px;
+    padding: 24px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+  }
+}
+.close__btn {
+  width: 32px;
+  height: 32px;
+  background-color: variables.$color-bg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 23px;
+  right: 23px;
+
+  img {
+    width: 18px;
+    rotate: 45deg;
+  }
+}

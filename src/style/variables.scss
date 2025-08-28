@@ -1,0 +1,53 @@
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #e3e2e4;
+
+$color-bg: #1f0e33;
+
+$color__btn: #5286ec;
+$color__btn__hover: #5085e8;
+
+$border__btn: #739cf1;
+
+$bg-card-odd: #432865;
+$bg-card-even: #302f75;
+
+$bg-gray: #f2f6ff;
+$bg-btn-gray: #dee3ff;
+$bg-hover: #411344;
+
+$btn__sm__bg: #452564;
+$btn__sm__bg__hover: #dae5fc;
+
+$text__gray: #c5b9d5;
+$text__blue: #5185ed;
+
+$border__btn__bg__hover: #6c97f0;
+$color-input-bg: #edeef4;
+
+$bg__btn__black: #000000;
+$bg__btn__secondary: #5285ee;
+$bg__btn__tertiary: #dae5fb;
+
+$color-placeholder: #99aace;
+$color-link: #ff6e6e;
+$color-error: #fd9e96;
+// FONTS
+$font-name: "PTRootUI", Arial, sans-serif;
+
+// TRANSITIONS
+$transition-duration: 0.35s;
+$transition-timing-function: ease;
+$transition: $transition-duration $transition-timing-function;
+
+// SETTINGS
+$desktop-xxl: 2560;
+$desktop-xl: 1920;
+$desktop-lg: 1680;
+$desktop-md: 1440;
+$desktop-sm: 1366;
+$desktop-xs: 1280;
+$desktop: 1024;
+$tablet: 1024;
+$mobile: 800;

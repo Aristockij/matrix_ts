@@ -1,0 +1,24 @@
+@import "../../style/variables.scss";
+
+.wrap {
+  max-width: 400px;
+  padding: 15px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 20px;
+  background: $color-white;
+  z-index: 9999999;
+
+  @media (max-width: 800px) {
+    margin-right: 20px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  p a {
+    text-decoration: underline;
+  }
+}

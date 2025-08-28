@@ -1,0 +1,149 @@
+@import "../../style/variables.scss";
+@import "../../style/functions/responsive.scss";
+@import "../../style/mixins/breakpoint.scss";
+
+.chakra {
+  width: 500px;
+  position: relative;
+  color: #000;
+  @include devices {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    position: absolute;
+  }
+  & > div {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    transform: translate(var(--offset-x), var(--offset-y));
+    width: var(--w);
+    height: var(--w);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_a {
+    color: #fff;
+  }
+  &_b {
+    color: #fff;
+  }
+  &_c {
+    color: #fff;
+  }
+  &_d {
+    color: #fff;
+  }
+
+  &_j {
+    font-size: vc(12);
+    @include devices {
+      font-size: vc(7);
+    }
+  }
+  &_k {
+    font-size: vc(12);
+    @include devices {
+      font-size: vc(7);
+    }
+  }
+  &_l {
+    font-size: vc(12);
+    @include devices {
+      font-size: vc(7);
+    }
+  }
+
+  &_m {
+    color: #fff;
+  }
+  &_n {
+    @include devices {
+      font-size: vc(11);
+    }
+  }
+
+  &_o {
+    @include devices {
+      font-size: vc(11);
+    }
+  }
+  &_p {
+    @include devices {
+      font-size: vc(8);
+    }
+  }
+
+  &_q {
+    @include devices {
+      font-size: vc(9);
+    }
+  }
+  &_r {
+    color: #fff;
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+
+  &_s {
+    @include devices {
+      font-size: vc(9);
+    }
+  }
+  &_t {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+
+  &_v {
+    font-size: vc(12);
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+  &_y {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+  &_w {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+
+  &_x {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+
+  &_1 {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+
+  &_4 {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+
+  &_5 {
+    @include devices {
+      font-size: vc(10);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.footer {
+  &__label {
+    font-weight: 700;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    color: variables.$color-white;
+    padding: 22px 0px 30px 0px;
+    font-size: 14px;
+    gap: 16px;
+
+    @include breakpoint.devices {
+      padding: 30px 10px 30px 0px;
+      flex-direction: column-reverse;
+    }
+
+    & > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

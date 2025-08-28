@@ -1,0 +1,65 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.accordion {
+  &__wrap {
+    // cursor: pointer;
+    background-color: variables.$bg-card-even;
+    border-radius: 14px;
+  }
+
+  &__btn {
+    min-width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint.devices {
+      margin-left: 45px;
+    }
+  }
+
+  &__title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px 12px 20px;
+    align-items: center;
+    font-weight: 500;
+
+    img {
+      width: 18px;
+      transition: 0.3s;
+    }
+
+    &.active {
+      img {
+        rotate: 45deg;
+      }
+    }
+  }
+
+  &__body {
+    padding-top: 10px;
+    padding-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &__collapse {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    padding: 0 24px;
+
+    &.open {
+      overflow: hidden;
+      transition: 0.3s;
+      height: auto;
+    }
+  }
+}

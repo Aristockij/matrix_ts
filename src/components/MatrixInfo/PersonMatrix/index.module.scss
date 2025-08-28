@@ -1,0 +1,10 @@
+.btn__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  & > a {
+    max-width: 300px;
+  }
+}

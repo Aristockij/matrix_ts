@@ -1,0 +1,46 @@
+@use "../../style/variables.scss";
+
+.error {
+  // border: 1px solid red;
+
+  &__message {
+    position: absolute;
+    font-size: 11px;
+    bottom: -18px;
+    color: variables.$color-error;
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 42px;
+  border-radius: 25px;
+  background: variables.$btn__sm__bg;
+  padding: 11px 14px;
+  position: relative;
+  input {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.field__date {
+  position: relative;
+  input {
+    color: transparent;
+  }
+
+  span {
+    position: absolute;
+    left: 0;
+    color: variables.$color-placeholder;
+    font-size: 14px;
+    pointer-events: none;
+  }
+
+  &.selected {
+    input {
+      color: variables.$color-white;
+    }
+  }
+}

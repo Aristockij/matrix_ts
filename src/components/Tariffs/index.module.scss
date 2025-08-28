@@ -1,0 +1,119 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.section__wrap {
+  gap: 16px;
+
+  @include breakpoint.devices {
+    flex-direction: column;
+  }
+
+  & > div:nth-child(1),
+  & > div:nth-child(3) {
+    padding: 18px 0;
+  }
+
+  & > div:nth-child(even) > div {
+    background: variables.$bg-card-even;
+    color: variables.$color-white;
+
+    li::before {
+      background-color: variables.$color-white;
+    }
+  }
+}
+
+.title__main {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 35px;
+
+  @include breakpoint.devices {
+    margin-bottom: 13px;
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 418px;
+  justify-content: space-between;
+  flex: 1;
+
+  @include breakpoint.devices {
+    height: auto;
+
+    button {
+      margin: 0 auto;
+    }
+  }
+
+  &__inner {
+    border-radius: 24px;
+    padding: 16px 16px 3px 16px;
+    background-color: variables.$bg-card-odd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.title {
+  padding-top: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include breakpoint.devices {
+    margin-bottom: 10px;
+  }
+}
+
+.price {
+  font-size: 48px;
+  text-align: center;
+
+  @include breakpoint.devices {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+}
+
+.list {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 13px;
+
+  li {
+    position: relative;
+    padding-left: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+
+      left: 0;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: variables.$color-white;
+    }
+  }
+}

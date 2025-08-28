@@ -1,0 +1,28 @@
+@use "../../style/variables.scss";
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.wrap {
+  width: 442px;
+
+  @include breakpoint.devices {
+    width: calc(100vw - 80px);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+.btns__wrap {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 55px;
+  margin-bottom: 45px;
+
+  button {
+    width: 122px;
+  }
+}

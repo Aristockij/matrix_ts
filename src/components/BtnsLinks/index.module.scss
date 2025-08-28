@@ -1,0 +1,21 @@
+@use "../../style/functions/responsive.scss";
+@use "../../style/mixins/breakpoint.scss";
+
+.btn__wrap {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 8px;
+
+  @include breakpoint.devices {
+    flex-wrap: wrap;
+  }
+}
+.back {
+  width: 32px;
+  margin-bottom: 32px;
+
+  @include breakpoint.devices {
+    margin-bottom: 25px;
+  }
+}

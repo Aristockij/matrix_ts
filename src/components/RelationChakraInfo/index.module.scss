@@ -1,0 +1,26 @@
+.chakra__wrap {
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.chakra__img__wrapper {
+  padding: 20px 0;
+
+  @media (max-width: 800px) {
+    margin-bottom: 15px;
+  }
+}
+
+.chakra__wrap > div:last-child {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.chakra__img {
+  font-size: 10px;
+  @media (max-width: 800px) {
+    font-size: inherit;
+  }
+  div {
+    width: 100%;
+  }
+}
