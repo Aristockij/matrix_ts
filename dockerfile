@@ -1,28 +1,33 @@
-FROM node:20-alpine as dependencies
-WORKDIR /app 
+# deps
+FROM node:20-alpine AS deps
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --force
 
-COPY package.json package-lock.json ./
-RUN npm install --force
+# builder
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
 
-FROM node:20-alpine as builder
-ARG BUILD_TYPE=ru
 ARG NEXT_PUBLIC_BASEURL
+ARG PUBLIC_URL
+ARG NEXT_PUBLIC_STRIPE
+ARG BUILD_TYPE=ru
 
 ENV NEXT_PUBLIC_BASEURL=${NEXT_PUBLIC_BASEURL}
+ENV PUBLIC_URL=${PUBLIC_URL}
+ENV NEXT_PUBLIC_STRIPE=${NEXT_PUBLIC_STRIPE}
 
+RUN npm run build:${BUILD_TYPE}
+
+# runner
+FROM node:20-alpine AS runner
 WORKDIR /app
-
-COPY . .
-COPY --from=dependencies /app/node_modules ./node_modules
-RUN npm run build:$BUILD_TYPE
-
-FROM node:20-alpine as runner
-WORKDIR /app
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
+ENV NODE_ENV=production
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/next.config.js ./next.config.js
-
+COPY --from=builder /app/public ./public
+COPY --from=deps /app/node_modules ./node_modules
+COPY package.json .
 EXPOSE 3000
-CMD ["npm" , "start"]
+CMD ["npm","start"]
