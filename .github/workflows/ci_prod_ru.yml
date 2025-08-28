@@ -71,8 +71,8 @@ jobs:
 
             docker pull aristockij/taro-matrix-ru:latest &
             docker pull aristockij/taro-matrix-en:latest &
-
             docker pull nginx:latest &
+            
             wait
 
             docker compose stop
