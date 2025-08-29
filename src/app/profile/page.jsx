@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PersonInfo from "@/components/PersonInfo";
+export const dynamic = "force-dynamic";
 
 const page = () => {
   return (
