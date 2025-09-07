@@ -52,7 +52,8 @@
       "btnMale": "Male",
       "firstName": "First name",
       "date": "Date of birth",
-      "submit": "Calculate"
+      "submit": "Calculate",
+      "submit_cur": "Available to you: "
     },
     "popup": {
       "title": "Personal Matrix is ready",

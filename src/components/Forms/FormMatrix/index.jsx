@@ -103,7 +103,9 @@ const FormMatrix = () => {
               type='submit'
               disabled={isSubmitting}
             >
-              {t("form.submit")}
+              {isPayd
+                ? `${t("form.submit_cur")} ${counterItem}`
+                : t("form.submit")}
             </button>
           </Form>
         )}

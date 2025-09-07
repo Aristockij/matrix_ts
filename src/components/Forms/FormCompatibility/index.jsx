@@ -124,7 +124,7 @@ const FormCompatibility = () => {
             </div>
 
             <button
-              className={`${s.btn__submit} btn btn__primary`}
+              className={`${s.btn__submit} btn btn__primary btn__gradient`}
               type='submit'
               disabled={isSubmitting}
             >

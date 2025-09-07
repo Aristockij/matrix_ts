@@ -112,7 +112,7 @@ const FormFinance = () => {
             </div>
 
             <button
-              className='btn btn__primary'
+              className='btn btn__primary btn__gradient'
               type='submit'
               disabled={isSubmitting}
             >
