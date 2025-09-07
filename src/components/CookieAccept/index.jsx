@@ -3,9 +3,11 @@
 import s from "./index.module.scss";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const t = useTranslations("CookieAccept");
 
   useEffect(() => {
     const accepted = localStorage.getItem("cookieAccepted");
@@ -24,15 +26,15 @@ const index = () => {
   return (
     <div className={s.wrap}>
       <p>
-        Мы используем файлы cookie и обрабатываем некоторые персональные данные.
-        Используя наш сервис Вы даете{" "}
-        <Link href='/policy'>Согласие на обработку персональных данных.</Link>
+        {t("text")}
+
+        <Link href='/policy'> {t("link")}</Link>
       </p>
       <button
         className='btn btn__secondary btn__gradient'
         onClick={acceptCookie}
       >
-        принять
+        {t("btn")}
       </button>
     </div>
   );

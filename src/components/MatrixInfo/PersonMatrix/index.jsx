@@ -1,13 +1,11 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import PersonalInfo from "../PersonalInfo";
 import ChakraInfo from "../ChakraInfo";
 import { useTranslations, useLocale } from "next-intl";
 import s from "./index.module.scss";
 import { useGetProfile } from "@/hooks/useGetProfile";
-import { useGetItems } from "@/hooks/useGetItems";
-import { useCheckout } from "@/hooks/useCheckout";
-import { useGetCalculation } from "@/hooks/useGetCalculation";
 import PopupContainer from "@/components/PopupContainer";
 import { useMatrix } from "@/hooks/useMatrix";
 import Enter from "@/components/Enter";
@@ -16,6 +14,7 @@ import ChakraSoc from "@/components/ChakraSoc";
 import { useRouter } from "next/navigation";
 import { usePayment } from "@/hooks/usePayment";
 import { stripeProducts, stripeProductsTest } from "@/constants/stripeProducts";
+import { useItemsMatrixCalc } from "@/hooks/useItemsMatrixCalc";
 
 const PersonMatrix = ({
   data,
@@ -25,7 +24,7 @@ const PersonMatrix = ({
   date2,
   serviceCode,
   paydItem,
-}: any) => {
+}) => {
   const d = useTranslations("Matrix");
   const t = useTranslations("Tariffs");
   const locale = useLocale();
@@ -33,14 +32,6 @@ const PersonMatrix = ({
 
   const [isOpenPopup, setOpenPopup] = useState(false);
   const [isFailPay, setFailPat] = useState(false);
-  const [isPayd, setIsPayd] = useState(false);
-  const [counterItem, setCounterItem] = useState(0);
-  const [currentId, setCurrentId] = useState(null);
-
-  const matchCode =
-    (serviceCode === "FINANCE_MATRIX" && "PRODUCT_MATRIX_FINANCE") ||
-    (serviceCode === "PERSONAL_MATRIX" && "PRODUCT_MATRIX_PERSONAL") ||
-    (serviceCode === "RELATION_MATRIX" && "PRODUCT_MATRIX_COMPATIBILITY");
 
   const [valueMatrix, setValueMatrix] = useState({
     name,
@@ -57,11 +48,10 @@ const PersonMatrix = ({
     (serviceCode === "RELATION_MATRIX" &&
       `/matrixa_preview?name=${name}&birthDate=${date}&name2=${name2}&birthDate2=${date2}&isSovmest=${"true"}`) ||
     (serviceCode === "FINANCE_MATRIX" &&
-      `/matrixa_preview?name=${name}&birthDate=${date}&isFinance=${"true"}`) ||
-    "";
+      `/matrixa_preview?name=${name}&birthDate=${date}&isFinance=${"true"}`);
 
   const { mutate: isPay } = useMatrix({
-    onSuccess: (data: any) => {
+    onSuccess: (data) => {
       router.push(
         `/matrix/${data.data.id}?serviceCode=${serviceCode}&id=${data.data.id}&paydItem=true`
       );
@@ -73,14 +63,12 @@ const PersonMatrix = ({
     { name: data?.name2 || null, date: data?.birthDate2 || null },
   ];
 
-  const parsedData = data?.table?.map((item: any) => [
+  const parsedData = data?.table?.map((item) => [
     item.physic,
     item.energy,
     item.emotions,
   ]);
   const { data: profileData } = useGetProfile();
-  const { data: userItems } = useGetItems();
-  const { data: calculationItems, isLoading } = useGetCalculation();
 
   const { errorStripe, errorUkassa, checkoutStripe, checkoutUkassa } =
     usePayment();
@@ -91,41 +79,13 @@ const PersonMatrix = ({
     }
   }, [errorStripe, errorUkassa]);
 
-  useEffect(() => {
-    if (!userItems || !valueMatrix.serviceCode) return;
+  const { currentId, isPayd, counterItem } = useItemsMatrixCalc({
+    valueMatrix,
+    serviceCode,
+    setValueMatrix,
+  });
 
-    const validCodes = [matchCode, "PRODUCT_MATRIX_UNIVERSAL"].filter(Boolean);
-    const matchingItem = userItems.find(
-      (el: any) => validCodes.includes(el.productCode) && el.amount > 0
-    );
-
-    if (matchingItem) {
-      setIsPayd(true);
-      setValueMatrix((prev) => ({
-        ...prev,
-        userItemId: matchingItem.id,
-      }));
-    }
-
-    if (userItems) {
-      setCounterItem(() =>
-        userItems
-          .filter((el: any) => validCodes.includes(el.productCode))
-          .reduce((acc: any, cur: any) => acc + cur.amount, 0)
-      );
-    }
-  }, [userItems, matchCode]);
-
-  useEffect(() => {
-    if (userItems && calculationItems) {
-      userItems.filter((el: any, index: number) => {
-        if (el.id === calculationItems.userItemId)
-          return setCurrentId(calculationItems.id);
-      });
-    }
-  }, [calculationItems, userItems]);
-
-  const openPopup = () => {
+  const openPopup = (props) => {
     setOpenPopup(true);
   };
 
@@ -142,8 +102,6 @@ const PersonMatrix = ({
       setFailPat(false);
     }, 5000);
   };
-
-  const { mutate: checkout, isSuccess, isError } = useCheckout();
 
   const handlePayment = () => {
     if (locale === "en") {
@@ -175,16 +133,16 @@ const PersonMatrix = ({
         <div className={s.btn__wrap}>
           {isPayd ? (
             <div
-              className={`btn btn__primary btn__gradient`}
+              className={`btn btn__primary btn__gradient btn__gradient`}
               onClick={() => {
-                isPay(valueMatrix as any);
+                isPay(valueMatrix);
               }}
             >
               {d("popup.quantity")}: {counterItem}
             </div>
           ) : (
             <button
-              className={`btn btn__primary btn__gradient `}
+              className={`btn btn__primary btn__gradient btn__gradient`}
               onClick={() => {
                 profileData?.email ? handlePayment() : openPopup();
               }}
@@ -207,7 +165,7 @@ const PersonMatrix = ({
           isPayd={isPayd}
           title={d("popup.quantity")}
           counterItem={counterItem}
-          calcFunc={() => isPay(valueMatrix as any)}
+          calcFunc={() => isPay(valueMatrix)}
         />
       )}
       <PopupContainer OpenPopup={isOpenPopup} ClosePopup={closePopup}>

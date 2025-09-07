@@ -1,9 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import InputField from "../../InputField";
 import s from "./index.module.scss";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import { useItemsMatrixCalc } from "@/hooks/useItemsMatrixCalc";
+import { useMatrix } from "@/hooks/useMatrix";
 
 const FormCompatibility = () => {
   const t = useTranslations("Matrix");
@@ -23,23 +28,62 @@ const FormCompatibility = () => {
       .required("введите дату"),
   });
 
+  const [valueMatrix, setValueMatrix] = useState({
+    name: "",
+    birthDate: "",
+    name2: "",
+    birthDate2: "",
+    serviceCode: "RELATION_MATRIX",
+    userItemId: null,
+  });
+
+  const serviceCode = "RELATION_MATRIX";
+  const { isPayd, counterItem } = useItemsMatrixCalc({
+    valueMatrix,
+    serviceCode,
+    setValueMatrix,
+  });
+
+  const { mutate: isPay } = useMatrix({
+    onSuccess: (data) => {
+      router.push(
+        `/matrix/${data.data.id}?serviceCode=${serviceCode}&id=${data.data.id}&paydItem=true`
+      );
+    },
+  });
+
   return (
     <>
       <Formik
         initialValues={{ name: "", birthDate: "", name2: "", birthDate2: "" }}
         validationSchema={validation}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            router.push(
-              `/matrixa_preview?name=${values.name}&birthDate=${
-                values.birthDate
-              }&name2=${values.name2}&birthDate2=${
-                values.birthDate2
-              }&isSovmest=${"true"}`
-            );
+        onSubmit={(values) => {
+          try {
+            const val = {
+              userItemId: valueMatrix.userItemId,
+              name: values.name,
+              birthDate: values.birthDate,
+              name2: values.name2,
+              birthDate2: values.birthDate2,
+              serviceCode: "RELATION_MATRIX",
+            };
 
-            setSubmitting(false);
-          }, 400);
+            if (isPayd) {
+              isPay(val);
+            } else {
+              router.push(
+                `/matrixa_preview?name=${values.name}&birthDate=${
+                  values.birthDate
+                }&name2=${values.name2}&birthDate2=${
+                  values.birthDate2
+                }&isSovmest=${"true"}`
+              );
+
+              setSubmitting(false);
+            }
+          } catch (err) {
+            console.log(err);
+          }
         }}
       >
         {({ isSubmitting }) => (
@@ -80,11 +124,13 @@ const FormCompatibility = () => {
             </div>
 
             <button
-              className={`${s.btn__submit} btn btn__primary btn__gradient`}
+              className={`${s.btn__submit} btn btn__primary`}
               type='submit'
               disabled={isSubmitting}
             >
-              {t("Compatibility.btn")}
+              {isPayd
+                ? `${t("form.submit_cur")} ${counterItem}`
+                : t("Compatibility.btn")}
             </button>
           </Form>
         )}

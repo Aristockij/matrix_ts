@@ -8,7 +8,7 @@ export const useCheckoutStripe = () => {
       price: string;
       email: string;
       offerId: string | number;
-      redirectURL?: string | undefined;
+      redirectURL?: string;
     }) => {
       const { data } = await axios.post("/api/checkout_sessions", vars);
       return data as { id: string; url: string };

@@ -1,79 +1,89 @@
-import { useEffect, useState } from "react";
+"use client";
+
+import { useState, useEffect, useCallback, useMemo } from "react";
 import PopupContainer from "../../PopupContainer";
+import s from "./index.module.scss";
 import d from "../index.module.scss";
 import { useTranslations } from "next-intl";
 import TouchCard from "@/components/TouchCard";
 import AnswerQuestion from "../AnswerQuestion";
-import { useMutation } from "@tanstack/react-query";
-import axiosClient from "@/helpers/axiosInstance";
+import { useTarotInfo } from "@/hooks/useTarotInfo";
+import { useGetAnswer } from "@/hooks/useGetAnswer";
+import { useTarotAnswer } from "@/hooks/useTarotAnswer";
+import { useRouter } from "next/navigation";
 
 const ThreeCards = () => {
   const t = useTranslations("YesNo");
+  const router = useRouter();
 
+  const [num, setNum] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
-  const [cardDisabled, setCardDisabled] = useState(true);
   const [arrayCard, setArrayCard] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
   const [dataAnswer, setDataAnswer] = useState(null);
 
-  const [arrayIndexCard, setArrayIndexCard] = useState([]);
   const [textareaVal, setTextareaVal] = useState("");
 
-  const getAnswer = () => {
+  const getCardArray = useCallback((cards) => {
+    setArrayCard((prev) => (prev === cards ? prev : cards));
+  }, []);
+
+  const arrayIndexCard = useMemo(
+    () => arrayCard.map((item) => item?.index),
+    [arrayCard]
+  );
+
+  const getAnswer = useCallback((e) => {
+    // e?.preventDefault?.();
+    setNum(Math.floor(Math.random() * 2) + 1);
     setOpenPopup(true);
-  };
+  }, []);
 
-  const closePopup = () => {
-    setOpenPopup(false);
-  };
+  const cardDisabled = useMemo(
+    () => textareaVal.trim().length === 0,
+    [textareaVal]
+  );
 
-  const getCardArray = (el) => {
-    setArrayCard(el);
-  };
-
-  useEffect(() => {
-    if (arrayCard) {
-      const indexArray = arrayCard.map((item) => item.index);
-      setArrayIndexCard(indexArray);
-    }
-  }, [arrayCard]);
-
-  useEffect(() => {
-    if (textareaVal.length > 0) {
-      setCardDisabled(false);
-      getCardArray();
-    } else {
-      setCardDisabled(true);
-    }
-  }, [textareaVal]);
-
-  const mutation = useMutation({
-    mutationFn: (val) => {
-      console.log("запрос: ", val);
-      return axiosClient.post(
-        `${process.env.NEXT_PUBLIC_BASEURL}/taro/preview`,
-        val
-      );
-    },
-    onSuccess: (data) => {
-      setDataAnswer(data);
-      console.log(data);
-    },
-    onError: (error) => {
-      console.log("server error: ", error);
-      setErrorMessage(error.message);
-    },
+  const { mutate: mutation } = useTarotInfo({
+    onSuccess: (data) => setDataAnswer(data),
+    onError: (error) => setErrorMessage(error.message),
   });
 
-  let value = {
-    question: textareaVal,
-    pickedCards: arrayIndexCard,
-    serviceCode: "TARO_SPREAD",
-  };
+  const value = useMemo(
+    () => ({
+      question: textareaVal,
+      pickedCards: arrayIndexCard,
+      serviceCode: "TARO_SPREAD",
+    }),
+    [textareaVal, arrayIndexCard]
+  );
 
-  const onSubmitForm = () => {
-    mutation.mutate(value);
-  };
+  const { valueMatrix, counterItem } = useTarotAnswer({
+    serviceCode: "TARO_SPREAD",
+    value,
+  });
+
+  const { mutate: getAnswerLink } = useGetAnswer({
+    router: router,
+    serviceCode: "TARO_SPREAD",
+  });
+
+  const submitVal = useCallback(
+    (e) => {
+      // e?.preventDefault?.();
+      if (valueMatrix) getAnswerLink(valueMatrix);
+    },
+    [getAnswerLink, valueMatrix]
+  );
+
+  const onSubmitForm = useCallback(
+    (e) => {
+      // e.preventDefault();
+      mutation(value);
+    },
+    [mutation, value]
+  );
+  const closePopup = useCallback(() => setOpenPopup(false), []);
 
   return (
     <>
@@ -96,14 +106,26 @@ const ThreeCards = () => {
             getCardArray={getCardArray}
             disabled={cardDisabled}
           />
-          <button
-            className={`${d.btn__width} btn btn__primary`}
-            onClick={getAnswer}
-            disabled={arrayIndexCard.length < 3 ? true : false}
-            type='submit'
-          >
-            {t("btn")}
-          </button>
+          <>
+            {counterItem > 0 ? (
+              <button
+                className={`${s.answer__btn} btn btn__secondary btn__gradient`}
+                disabled={arrayIndexCard.length < 3 ? true : false}
+                onClick={submitVal}
+              >
+                {t("ThreeCard.popup.submit_left")}: {counterItem}
+              </button>
+            ) : (
+              <button
+                className={`${d.btn__width} btn btn__primary btn__gradient`}
+                onClick={getAnswer}
+                disabled={arrayIndexCard.length < 3 ? true : false}
+                type='submit'
+              >
+                {t("btn")}
+              </button>
+            )}
+          </>
         </form>
       </div>
 

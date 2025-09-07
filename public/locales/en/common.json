@@ -428,6 +428,9 @@
     "title": "Personal matrix",
     "from": "from",
     "load": "Load more",
+    "title_finance": "matrix finance",
+    "title_personal": "Personal matrix",
+    "title_relation": "Relation matrix",
 
     "paramsMock": {
       "0": {
@@ -498,6 +501,30 @@
         "title": "Result",
         "subtitle": ""
       }
+    }
+  },
+  "CookieAccept": {
+    "text": "We use cookies and process some personal data. By using our service you give",
+    "link": "consent to the processing of personal data.",
+    "btn": "accept"
+  },
+  "CookieAcceptContent": {
+    "title": "Consent to the Processing of Personal Data",
+    "p1": "In accordance with Federal Law No. 152-FZ of 27.07.2006 “On Personal Data”, I hereby give my consent to the personal data operator — Sole Proprietor Ivan Aleksandrovich Firsanov, TIN 780733499246, PSRNIP 322784700234631 — to process my personal data for the purpose of:",
+    "list": {
+      "1": "identifying the User on the website or in the mobile application and providing access to its features;",
+      "2": "sending the User notifications, requests, and information related to the use of the Site;",
+      "3": "processing the User’s requests and applications addressed to the Operator;",
+      "4": "providing the User with newsletters and other information on behalf of the Operator and its partners;",
+      "5": "compiling statistics that help the Operator optimize the structure and content of the Site and improve its usability."
+    },
+    "text": {
+      "1": "My personal data covered by this consent include: name, date of birth, phone number, email address; details of a legal entity, sole proprietor, or self-employed person, TIN (INN), PSRN/PSRNIP (OGRN/OGRNIP), bank details or details of electronic means of payment solely for paying remuneration under the “MATRIX OF DESTINY Partner Agreement” with the service www.matrixa-sudby.ru; IP address, browser information, cookie data, access time, referrer (previous page address), scroll map, information about the source of the user’s visit, and data on purchases made.",
+      "2": "Actions performed with my personal data include: collection, recording, systematization, accumulation, storage, clarification (updating, changing), retrieval, use, depersonalization, blocking, destruction, and deletion of my personal data.",
+      "3": "This consent is valid for the entire period of the User’s registration on the website and may be revoked upon my written request.",
+      "4": "Upon a written request, I have the right to receive information regarding the processing of my personal data (pursuant to clause 7 of Article 14 of the Federal Law of the Russian Federation No. 152-FZ of 27.07.2006 “On Personal Data”).",
+      "5": "I confirm that I am familiar with the provisions of the Federal Law of the Russian Federation No. 152-FZ of 27.07.2006 “On Personal Data”, and my rights and obligations in the field of personal data protection have been explained to me.",
+      "6": "I have been informed that the Operator is entitled to continue processing my personal data without my consent in cases provided for by the legislation of the Russian Federation."
     }
   }
 }

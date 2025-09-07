@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import InputField from "../../InputField";
@@ -5,6 +8,8 @@ import RadioField from "../../RadioField";
 import s from "./index.module.scss";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import { useItemsMatrixCalc } from "@/hooks/useItemsMatrixCalc";
+import { useMatrix } from "@/hooks/useMatrix";
 
 const FormMatrix = () => {
   const t = useTranslations("Matrix");
@@ -18,6 +23,29 @@ const FormMatrix = () => {
     date: Yup.string()
       .matches(dateRegExp, "неверный формат даты")
       .required("введите дату"),
+  });
+
+  const [valueMatrix, setValueMatrix] = useState({
+    name: "",
+    birthDate: "",
+    name2: null,
+    birthDate2: null,
+    serviceCode: "PERSONAL_MATRIX",
+    userItemId: null,
+  });
+  const serviceCode = "PERSONAL_MATRIX";
+  const { isPayd, counterItem } = useItemsMatrixCalc({
+    valueMatrix,
+    serviceCode,
+    setValueMatrix,
+  });
+
+  const { mutate: isPay } = useMatrix({
+    onSuccess: (data) => {
+      router.push(
+        `/matrix/${data.data.id}?serviceCode=${serviceCode}&id=${data.data.id}&paydItem=true`
+      );
+    },
   });
 
   return (

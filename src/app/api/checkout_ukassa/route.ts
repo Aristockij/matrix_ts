@@ -7,7 +7,7 @@ export async function POST(request: Request) {
       price,
       email,
       offerId,
-      redirectURL = "/profile?data=2",
+      redirectURL = "/profile?data=3",
     } = await request.json();
 
     const shopId = process.env.UKASSA_ID;

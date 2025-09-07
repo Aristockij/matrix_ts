@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import s from "./index.module.scss";
 import { useTranslations, useLocale } from "next-intl";
 import { useGetProfile } from "@/hooks/useGetProfile";
@@ -15,6 +16,7 @@ const Tariffs = () => {
   const [popupFail, openPopupFail] = useState(false);
 
   const locale = useLocale();
+
   const t = useTranslations("Tariffs");
 
   const { data } = useGetProfile();

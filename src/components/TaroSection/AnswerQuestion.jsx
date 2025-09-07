@@ -1,13 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { useEffect } from "react";
 import s from "./index.module.scss";
 import Image from "next/image";
 import Loading from "@/components/Loading";
 import { useTranslations } from "next-intl";
-import { useMutation } from "@tanstack/react-query";
-import { useGetItems } from "@/hooks/useGetItems";
 import { useRouter } from "next/navigation";
-import axiosClient from "@/helpers/axiosInstance";
+import { useTarotAnswer } from "@/hooks/useTarotAnswer";
+import { useGetAnswer } from "@/hooks/useGetAnswer";
 
 const AnswerQuestion = ({
   closePopup,
@@ -17,62 +17,26 @@ const AnswerQuestion = ({
   serviceCode,
 }) => {
   const t = useTranslations("YesNo");
-  const [valueMatrix, setValueMatrix] = useState(null);
-  const [counterItem, setCounterItem] = useState(0);
-  const { data: userItems } = useGetItems();
   const router = useRouter();
 
-  const matchCode = serviceCode === "TARO_SPREAD" && "PRODUCT_TARO_UNIVERSAL";
-
-  useEffect(() => {
-    if (!userItems) return;
-    const matchingItem = userItems.find(
-      (el) => el.productCode === matchCode && el.amount > 0
-    );
-    console.log("count items tarot: ", matchingItem);
-
-    if (matchingItem && value) {
-      setValueMatrix(() => ({
-        question: value.question,
-        pickedCards: value.pickedCards,
-        serviceCode: serviceCode,
-        userItemId: matchingItem.id,
-      }));
-    }
-
-    if (userItems) {
-      setCounterItem(() =>
-        userItems
-          .filter((el) => el.productCode === matchCode)
-          .reduce((acc, cur) => acc + cur.amount, 0)
-      );
-    }
-  }, [userItems, value]);
-
-  const mutation = useMutation({
-    mutationFn: (val) => {
-      // console.log("запрос: ", val);
-      return axiosClient.post(
-        `${process.env.NEXT_PUBLIC_BASEURL}/taro`,
-        valueMatrix
-      );
-    },
-    onSuccess: (data) => {
-      closePopup();
-      console.log("data tarot: ", data);
-      router.push(
-        `/taro/${data.data.id}?serviceCode=${serviceCode}&id=${data.data.id}&paydItem=true`
-      );
-    },
-    onError: (error) => {
-      console.log("server error: ", error);
-    },
+  const { valueMatrix, counterItem } = useTarotAnswer({
+    serviceCode,
+    value,
   });
 
+  const { mutate: getAnswer, isSuccess } = useGetAnswer({
+    router: router,
+    serviceCode,
+  });
+
+  useEffect(() => {
+    if (isSuccess) closePopup();
+  }, [isSuccess]);
+
   const submitVal = () => {
-    mutation.mutate();
+    getAnswer(valueMatrix);
   };
-  console.log("value props: ", value?.pickedCards?.length);
+
   return (
     <div className={s.answer}>
       {value?.pickedCards?.length === 5 && <h2>{t("Tarot.popup.title")}</h2>}

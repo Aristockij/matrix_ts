@@ -8,7 +8,6 @@ import { useGetCalculation } from "@/hooks/useGetCalculation";
 
 const Calc = () => {
   const t = useTranslations("Profile.Calculation");
-
   const { data } = useGetCalculation();
 
   function getServiceInfo(el) {
