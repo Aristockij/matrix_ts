@@ -6,6 +6,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import TanstackProvider from "@/components/Provider";
 import CookieAccept from "@/components/CookieAccept";
+import YaMetric from "@/components/YaMetric";
+import { Suspense } from "react";
 
 const suisseIntl = localFont({
   src: [
@@ -39,9 +41,13 @@ export default async function RootLayout({ children }) {
         <TanstackProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
+
             <CookieAccept />
           </NextIntlClientProvider>
         </TanstackProvider>
+        <Suspense>
+          <YaMetric />
+        </Suspense>
       </body>
     </html>
   );
