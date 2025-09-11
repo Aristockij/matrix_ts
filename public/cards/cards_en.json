@@ -1,0 +1,392 @@
+[
+  {
+    "index": 0,
+    "name": "The Fool",
+    "description": "The Fool is a card of new beginnings and limitless possibilities. Free from fear and conventions, he’s ready for any adventure. The Fool moves forward, trusting life and believing in the best, even when it seems reckless."
+  },
+  {
+    "index": 1,
+    "name": "The Magician",
+    "description": "The Magician embodies the ability to harness the forces of nature and use them to achieve his aims. He commands the four Tarot elements: the cup, the sword, the wand, and the pentacle. His hand raised to the sky symbolizes a link to divine inspiration, while the other points to the earth, showing the skill of bringing ideas into reality. The Magician is the start of the journey, symbolizing a creative impulse."
+  },
+  {
+    "index": 2,
+    "name": "The High Priestess",
+    "description": "The Priestess is tied to the subconscious—keeper of secrets and inner wisdom. Behind her is a veil that hides what the ordinary eye cannot see. She personifies intuitive knowledge that comes from within. The Priestess teaches trust in intuition and fearlessness before the unknown."
+  },
+  {
+    "index": 3,
+    "name": "The Empress",
+    "description": "The Empress symbolizes motherhood, care, and connection with nature. Seated among fields overflowing with abundance, she embodies natural cycles and growth. The Empress carries the potential for creation—be it the birth of new life, ideas, or projects. This is a card of abundance and harmony."
+  },
+  {
+    "index": 4,
+    "name": "The Emperor",
+    "description": "The Emperor is a symbol of order and authority. He sits on a throne that represents power and control over the material world. The Emperor personifies law and stability, calling for discipline and governance. He stands for the structures and forces that protect and support society."
+  },
+  {
+    "index": 5,
+    "name": "The Hierophant",
+    "description": "The Hierophant is a spiritual mentor leading seekers toward higher truths. It is a card of faith, tradition, and the search for spiritual meaning. It can signify following established norms or seeking a spiritual teacher."
+  },
+  {
+    "index": 6,
+    "name": "The Lovers",
+    "description": "The Lovers is a card of relationships and choice, especially in the realm of emotions. It symbolizes harmony between opposites and calls for honesty and sincerity in love. It also speaks to the importance of personal choices that can alter one’s destiny."
+  },
+  {
+    "index": 7,
+    "name": "The Chariot",
+    "description": "The Chariot symbolizes victory through control and discipline. It is forward movement with confidence and determination, and the skill of uniting opposing forces to reach goals. It says that success requires mastering your emotions and external circumstances."
+  },
+  {
+    "index": 8,
+    "name": "Strength",
+    "description": "Strength is a card of inner courage and patience. The lion symbolizes passions and emotions that must be tamed. This card reminds us that true strength comes not from aggression, but from managing our impulses with gentleness and resolve."
+  },
+  {
+    "index": 9,
+    "name": "The Hermit",
+    "description": "The Hermit points to the need for solitude and self-knowledge. He carries the light of wisdom, yet his path is one of aloneness. This card symbolizes the search for truth within—a period of reflection and meditation. It invites deep self-examination."
+  },
+  {
+    "index": 10,
+    "name": "Wheel of Fortune",
+    "description": "The Wheel of Fortune points to the cycles of life and constant change. It’s a card of fate, reminding us that fortune can turn for or against us. It also tells us that after hardships, new opportunities arise."
+  },
+  {
+    "index": 11,
+    "name": "Justice",
+    "description": "Justice symbolizes balance and the need to make fair decisions. This card is tied to truth, karmic laws, and the consequences of our actions. It reminds us that justice ultimately prevails."
+  },
+  {
+    "index": 12,
+    "name": "The Hanged Man",
+    "description": "The Hanged Man is a card of temporary pause and contemplation. It points to the need for sacrifice in order to gain deeper understanding. The inverted figure symbolizes a new perspective and the chance to see the situation differently."
+  },
+  {
+    "index": 13,
+    "name": "Death",
+    "description": "Death is not an end but a transformation. It symbolizes the completion of a certain life stage and the beginning of a new one. Death points to the necessity of letting go of the past in order to move forward into growth and renewal."
+  },
+  {
+    "index": 14,
+    "name": "Temperance",
+    "description": "Temperance is the search for balance and harmony. It teaches us to find the golden mean in any situation. This is a time of blending different elements to create wholeness and inner equilibrium."
+  },
+  {
+    "index": 15,
+    "name": "The Devil",
+    "description": "The Devil symbolizes material attachments and dependencies that limit us. It is a card of deception and self-deception, warning that our fears and desires can imprison us in illusions."
+  },
+  {
+    "index": 16,
+    "name": "The Tower",
+    "description": "The Tower is the destruction of the old to make way for the new. It symbolizes sudden, sometimes painful changes that lead to liberation from constraints. The tower falls to clear space for new growth."
+  },
+  {
+    "index": 17,
+    "name": "The Star",
+    "description": "The Star is a card of inspiration and hope that shines in the darkness. It symbolizes healing and spiritual renewal. This card points to the light at the end of the tunnel and the chance to find harmony after crisis."
+  },
+  {
+    "index": 18,
+    "name": "The Moon",
+    "description": "The Moon symbolizes subconscious fears and illusions. It points to hidden emotions that can influence our behavior. This card urges us to explore our fears and trust our intuition."
+  },
+  {
+    "index": 19,
+    "name": "The Sun",
+    "description": "The Sun is a card of happiness and success. It symbolizes joy, clarity, and the light that brings understanding and fulfillment. This is a time of prosperity and achieving goals."
+  },
+  {
+    "index": 20,
+    "name": "Judgment",
+    "description": "Judgment symbolizes rebirth and awakening. It’s a time to recognize past mistakes and release them. This card is linked to purification and forgiveness—of oneself and others."
+  },
+  {
+    "index": 21,
+    "name": "The World",
+    "description": "The World is the completion of a cycle and the attainment of wholeness. It symbolizes achieving the highest harmony and success. It’s a time to celebrate and acknowledge that you have reached your goal."
+  },
+  {
+    "index": 22,
+    "name": "Ace of Wands",
+    "description": "The Ace of Wands is a powerful sign of a new creative path, the birth of ideas, and a drive to act. The wand blazing with bright fire points to energy ready to be realized. The card calls you to follow inspiration and use the opportunity to begin anew."
+  },
+  {
+    "index": 23,
+    "name": "Two of Wands",
+    "description": "The Two of Wands represents a moment of choice and deliberation. The figure stands with two wands, symbolizing a fork in the road. The card points to the need to think options through and plan your steps before acting."
+  },
+  {
+    "index": 24,
+    "name": "Three of Wands",
+    "description": "The Three of Wands points to a successful start and first results. A person stands looking into the distance over water, awaiting further developments. This card foretells expanding horizons and early successes on a new path."
+  },
+  {
+    "index": 25,
+    "name": "Four of Wands",
+    "description": "The Four of Wands symbolizes the completion of an important stage that calls for celebration. The card depicts festivity, unity, and a sense of safety. It says it’s time to enjoy the fruits of your labor and appreciate the stability achieved."
+  },
+  {
+    "index": 26,
+    "name": "Five of Wands",
+    "description": "The Five of Wands is a card of disagreements and quarrels. It depicts struggle that can be either constructive or destructive. The card reminds us of the importance of overcoming differences and seeking resolution."
+  },
+  {
+    "index": 27,
+    "name": "Six of Wands",
+    "description": "The Six of Wands symbolizes triumph and public recognition. A person on horseback, surrounded by a cheering crowd, embodies success and well-earned praise. It’s the victor’s card, showing that efforts have been rewarded."
+  },
+  {
+    "index": 28,
+    "name": "Seven of Wands",
+    "description": "The Seven of Wands is about defending your position. A person on higher ground fends off attacks, symbolizing the need to fight for your convictions. It’s a time to demonstrate confidence and resilience."
+  },
+  {
+    "index": 29,
+    "name": "Eight of Wands",
+    "description": "The Eight of Wands is a symbol of swift movement and progress. It foretells rapid developments, news, or sudden changes in a situation. The card suggests being ready for abrupt shifts."
+  },
+  {
+    "index": 30,
+    "name": "Nine of Wands",
+    "description": "The Nine of Wands symbolizes vigilance and readiness for possible struggle. Surrounded by wands, the figure is prepared for any surprise, reminding you to stay alert and strong in challenging situations."
+  },
+  {
+    "index": 31,
+    "name": "Ten of Wands",
+    "description": "The Ten of Wands shows a figure burdened with wands, symbolizing the weight of responsibility. It is a card of exhausting duties, pointing to the need to reassess priorities and possibly lighten the load."
+  },
+  {
+    "index": 32,
+    "name": "Page of Wands",
+    "description": "The Page of Wands is the youthful spirit of exploration and an interest in the new. Inspired by an idea but without a concrete plan yet, this card symbolizes the start of a path filled with enthusiasm and a readiness to learn."
+  },
+  {
+    "index": 33,
+    "name": "Knight of Wands",
+    "description": "The Knight of Wands charges forward, driven by passion and ambition. It is a card of active movement, sometimes impulsive. The Knight embodies the urge to act immediately, which can bring both success and risks."
+  },
+  {
+    "index": 34,
+    "name": "Queen of Wands",
+    "description": "The Queen of Wands symbolizes a strong, independent personality. She is confident and ready to support others. This card points to charisma and strength of character, as well as the ability to inspire and approach problems creatively."
+  },
+  {
+    "index": 35,
+    "name": "King of Wands",
+    "description": "The King of Wands symbolizes a wise and seasoned leader capable of guiding others. He is confident in his abilities and knows how to realize what’s envisioned. The card points to decisiveness and the capacity to manage large endeavors."
+  },
+  {
+    "index": 36,
+    "name": "Ace of Cups",
+    "description": "The Ace of Cups symbolizes the start of a new emotional chapter—new relationships, deep feelings, or inspiration. The card points to an awakening of the heart and a flow of positive emotions ready to fill life with love and harmony."
+  },
+  {
+    "index": 37,
+    "name": "Two of Cups",
+    "description": "The Two of Cups is a card of union—romantic, friendly, or in partnership. It symbolizes mutual understanding and affection between two people. This is a card of harmonious relationships built on trust and support."
+  },
+  {
+    "index": 38,
+    "name": "Three of Cups",
+    "description": "The Three of Cups is a card of celebration and coming together with friends. It symbolizes joy and the ease of communication. It’s a time to enjoy the company of loved ones and celebrate successes and achievements."
+  },
+  {
+    "index": 39,
+    "name": "Four of Cups",
+    "description": "The Four of Cups symbolizes inner dissatisfaction and the sense of missed opportunities. The figure is absorbed in thought, not noticing the cup being offered. This card calls for stepping out of apathy and seeing new possibilities."
+  },
+  {
+    "index": 40,
+    "name": "Five of Cups",
+    "description": "The Five of Cups is a card of sorrow and regret. The figure sees only the overturned cups, symbolizing losses. It points to the need to accept grief and let go of the past in order to notice what still remains positive."
+  },
+  {
+    "index": 41,
+    "name": "Six of Cups",
+    "description": "The Six of Cups symbolizes memories of childhood and joys of the past. It is a card of nostalgia and carefree times. It may point to rekindling old connections or returning to the past to understand the present."
+  },
+  {
+    "index": 42,
+    "name": "Seven of Cups",
+    "description": "The Seven of Cups shows many options and possibilities, but warns that not all are real. It is a card of illusions and dreams, symbolizing the need to make a choice that can mislead—or lead to new discoveries."
+  },
+  {
+    "index": 43,
+    "name": "Eight of Cups",
+    "description": "The Eight of Cups symbolizes leaving behind something that no longer brings fulfillment. It is a card of seeking new horizons and inner growth. It points to the need to leave the past in order to find something meaningful."
+  },
+  {
+    "index": 44,
+    "name": "Nine of Cups",
+    "description": "The Nine of Cups is the card of wish fulfillment and enjoyment of life. It symbolizes happiness and inner satisfaction. It’s a card of joy and celebration, pointing to contentment with oneself and one’s achievements."
+  },
+  {
+    "index": 45,
+    "name": "Ten of Cups",
+    "description": "The Ten of Cups embodies family happiness and harmonious relationships. It is a card of complete fulfillment and joy in close bonds. It points to peace, love, and unity in personal life."
+  },
+  {
+    "index": 46,
+    "name": "Page of Cups",
+    "description": "The Page of Cups is a young person open to love and intuitive insights. He symbolizes romantic feelings, dreaminess, and the awakening of emotions. The card reminds us to delight in small things and listen to the heart."
+  },
+  {
+    "index": 47,
+    "name": "Knight of Cups",
+    "description": "The Knight of Cups is the romantic hero who follows a dream. It is a card of love and sincere expression of feelings. It calls for moving forward in pursuit of ideals and cherished desires."
+  },
+  {
+    "index": 48,
+    "name": "Queen of Cups",
+    "description": "The Queen of Cups symbolizes care and intuitive understanding of others. She embodies kindness and emotional depth, readiness to support and heal. This card speaks to the importance of feelings and the ability to find inner harmony."
+  },
+  {
+    "index": 49,
+    "name": "King of Cups",
+    "description": "The King of Cups represents a mature person who can govern his emotions and support others. He symbolizes wisdom and calm, the ability to make important decisions guided by intuition and compassion."
+  },
+  {
+    "index": 50,
+    "name": "Ace of Swords",
+    "description": "The Ace of Swords symbolizes the start of a new mental path—insight and clarity of thought. It is a card of truth, showing that it’s time to make clear decisions and implement ideas. It points to the power of the mind and intellectual victories."
+  },
+  {
+    "index": 51,
+    "name": "Two of Swords",
+    "description": "The Two of Swords shows a person trying to find balance between two opposing forces. It is a card of uncertainty and the need to choose. It points to the need to view the situation from different angles to reach inner harmony."
+  },
+  {
+    "index": 52,
+    "name": "Three of Swords",
+    "description": "The Three of Swords symbolizes heartbreak and disappointment. It points to a period of suffering connected with separation or loss. It’s a difficult time that calls for accepting emotions and passing through pain to find strength."
+  },
+  {
+    "index": 53,
+    "name": "Four of Swords",
+    "description": "The Four of Swords symbolizes the need for a temporary pause and recovery. It is a card of rest and inner peace, pointing to the importance of rebooting and restoring energy after strain."
+  },
+  {
+    "index": 54,
+    "name": "Five of Swords",
+    "description": "The Five of Swords points to conflict and discord. It symbolizes a Pyrrhic victory or a loss where no one truly wins. It warns against needless quarrels and calls for reflecting on the consequences of actions."
+  },
+  {
+    "index": 55,
+    "name": "Six of Swords",
+    "description": "The Six of Swords shows a moment of transition and letting go of the past. This card symbolizes moving toward a calmer, more harmonious state. It points to the need to leave difficulties behind and head for new shores."
+  },
+  {
+    "index": 56,
+    "name": "Seven of Swords",
+    "description": "The Seven of Swords symbolizes hidden intentions and strategy. It points to the need to be cautious and consider all possibilities. It can also indicate deceit or attempts to avoid direct confrontation."
+  },
+  {
+    "index": 57,
+    "name": "Eight of Swords",
+    "description": "The Eight of Swords shows a person surrounded by swords, feeling trapped. This card symbolizes inner fears and limitations that prevent progress. It reminds us that obstacles are often created by our own mind."
+  },
+  {
+    "index": 58,
+    "name": "Nine of Swords",
+    "description": "The Nine of Swords is a card of anxiety and nightmares. It points to inner fears that disturb daily life. The card calls for facing fears and seeking ways to free oneself from negative thoughts."
+  },
+  {
+    "index": 59,
+    "name": "Ten of Swords",
+    "description": "The Ten of Swords symbolizes the end of a difficult stage, often tied to pain or betrayal. It marks a moment when something is over and there is no going back. It points to the need to accept the ending and move toward new beginnings."
+  },
+  {
+    "index": 60,
+    "name": "Page of Swords",
+    "description": "The Page of Swords symbolizes a curious young person ready to explore new ideas. It points to watchfulness and analytical ability. The Page of Swords can indicate the start of an intellectual path or a new idea."
+  },
+  {
+    "index": 61,
+    "name": "Knight of Swords",
+    "description": "The Knight of Swords rushes forward, driven by determination and the will to win. This card symbolizes rapid pursuit of a goal, often amid challenge or conflict. It calls for decisive action but warns against excessive impulsiveness."
+  },
+  {
+    "index": 62,
+    "name": "Queen of Swords",
+    "description": "The Queen of Swords symbolizes keen perception and the ability to see the essence of things. Honest and independent, her intellect and clarity allow for important decisions. This card points to approaching situations objectively and openly."
+  },
+  {
+    "index": 63,
+    "name": "King of Swords",
+    "description": "The King of Swords is a mature, experienced leader capable of wise, measured decisions. He symbolizes the strength of logic and reason, as well as high responsibility. The card points to acting by reason and adhering to principles."
+  },
+  {
+    "index": 64,
+    "name": "Ace of Pentacles",
+    "description": "The Ace of Pentacles symbolizes the start of a new material path—financial opportunities and stability. It is a card of prosperity and success, pointing to a chance to gain wealth and confidence. It reminds you to seize opportunities for a solid outcome."
+  },
+  {
+    "index": 65,
+    "name": "Two of Pentacles",
+    "description": "The Two of Pentacles represents the need to balance multiple obligations. It is a card of flexibility and skill in managing time and resources. It calls for adapting to change and maintaining equilibrium in affairs."
+  },
+  {
+    "index": 66,
+    "name": "Three of Pentacles",
+    "description": "The Three of Pentacles symbolizes teamwork and recognition of professional skill. It is a card of development and enhancing mastery through collaboration. It speaks to the importance of cooperation and professional growth."
+  },
+  {
+    "index": 67,
+    "name": "Four of Pentacles",
+    "description": "The Four of Pentacles shows a person tightly holding on to resources. It is a card of control over material goods, but also fear of loss. It reminds us that excessive attachment to the material can be limiting."
+  },
+  {
+    "index": 68,
+    "name": "Five of Pentacles",
+    "description": "The Five of Pentacles symbolizes a period of hardship and deprivation, often in the material realm. It is a card of trials, reminding that even in tough times support can be found. It also points to the need to accept help."
+  },
+  {
+    "index": 69,
+    "name": "Six of Pentacles",
+    "description": "The Six of Pentacles symbolizes exchange and mutual aid. It speaks of generosity and readiness to share resources. This card reminds us that helping others brings joy—and that balance between giving and receiving matters."
+  },
+  {
+    "index": 70,
+    "name": "Seven of Pentacles",
+    "description": "The Seven of Pentacles symbolizes a period of waiting and assessment. It is a card of effort and patience, when results must be evaluated and actions possibly adjusted. It points to fruits that will ripen with time."
+  },
+  {
+    "index": 71,
+    "name": "Eight of Pentacles",
+    "description": "The Eight of Pentacles embodies hard work and the development of mastery. It is a card of labor and dedication to improving skills. It speaks to the importance of perseverance and professionalism in achieving success."
+  },
+  {
+    "index": 72,
+    "name": "Nine of Pentacles",
+    "description": "The Nine of Pentacles symbolizes success and independence. It is a card of self-sufficiency and satisfaction with the results of one’s work. It reminds you to enjoy your achievements and what you have built by your own efforts."
+  },
+  {
+    "index": 73,
+    "name": "Ten of Pentacles",
+    "description": "The Ten of Pentacles is a card of material abundance and stability, often related to family and legacy. It symbolizes prosperity and security, as well as intergenerational bonds and enduring family traditions."
+  },
+  {
+    "index": 74,
+    "name": "Page of Pentacles",
+    "description": "The Page of Pentacles symbolizes the start of a path in the material world—an interest in learning and new projects. It is a card of first steps toward material success, as one seeks to acquire and hone new skills."
+  },
+  {
+    "index": 75,
+    "name": "Knight of Pentacles",
+    "description": "The Knight of Pentacles symbolizes diligent work and devotion to duty. He embodies stability, practicality, and persistence. The card says success is achieved through discipline and attention to detail."
+  },
+  {
+    "index": 76,
+    "name": "Queen of Pentacles",
+    "description": "The Queen of Pentacles symbolizes care for home and stability. She knows how to create comfort and sustain well-being. This is a card of practicality and nurture, reminding of the importance of comfort and steadiness in life."
+  },
+  {
+    "index": 77,
+    "name": "King of Pentacles",
+    "description": "The King of Pentacles symbolizes maturity, material success, and confidence. He manages resources wisely and cares for those around him. This card points to a stable position and experience that helps achieve goals."
+  }
+]

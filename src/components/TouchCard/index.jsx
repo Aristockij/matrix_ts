@@ -1,9 +1,15 @@
 import cards from "../../../public/cards/cards.json";
+import cards_en from "../../../public/cards/cards_en.json";
 import s from "./index.module.scss";
 import { useState, useRef, useEffect, useMemo } from "react";
+import { useLocale } from "next-intl";
 
 const Index = ({ limitCard, getCardArray, disabled }) => {
-  const [initialCards, setInitialCards] = useState(cards);
+  const locale = useLocale();
+
+  const [initialCards, setInitialCards] = useState(
+    locale === "en" ? cards_en : cards
+  );
   const [newCardsArr, setNewCardsArr] = useState([]);
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
   // const [selectedCardIndex, setSelectedCardIndex] = useState(null);
