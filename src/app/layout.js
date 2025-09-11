@@ -43,11 +43,11 @@ export default async function RootLayout({ children }) {
             {children}
 
             <CookieAccept />
+            <Suspense>
+              <YaMetric />
+            </Suspense>
           </NextIntlClientProvider>
         </TanstackProvider>
-        <Suspense>
-          <YaMetric />
-        </Suspense>
       </body>
     </html>
   );

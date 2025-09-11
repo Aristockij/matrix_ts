@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import s from "./index.module.scss";
 import { useTranslations } from "next-intl";
@@ -18,6 +18,12 @@ const AccordionItem = ({
   const t = useTranslations("Matrix");
 
   const itemRef = useRef();
+
+  useEffect(() => {
+    if (index === 0) {
+      setActive(0);
+    }
+  }, []);
 
   const clickHandler = (id) => {
     if (id === active) setActive(null);
@@ -61,14 +67,14 @@ const AccordionItem = ({
         {el.is_blocked &&
           (isPayd ? (
             <div
-              className={`btn btn__primary btn__secondary`}
+              className={`btn btn__primary btn__secondary btn__gradient`}
               onClick={calcFunc}
             >
               {title}: {counterItem}
             </div>
           ) : (
             <div
-              className={`btn btn__primary btn__secondary`}
+              className={`btn btn__primary btn__secondary btn__gradient`}
               onClick={togglePopup}
             >
               {t("popup.btn")}

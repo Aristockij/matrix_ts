@@ -133,7 +133,7 @@ const PersonMatrix = ({
         <div className={s.btn__wrap}>
           {isPayd ? (
             <div
-              className={`btn btn__primary btn__gradient btn__gradient`}
+              className={`btn btn__primary btn__gradient`}
               onClick={() => {
                 isPay(valueMatrix);
               }}

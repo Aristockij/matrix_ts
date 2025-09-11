@@ -19,8 +19,7 @@ const Index = () => {
 
     ym(${ymId}, 'init', 
       {
-        defer: true
-        ssr:true, 
+        defer: true,
         webvisor:true, 
         clickmap:true,
         ecommerce:"dataLayer", 

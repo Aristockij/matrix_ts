@@ -53,7 +53,7 @@ const AnswerQuestion = ({
       {data && (
         <div className={s.answer__cards}>
           {data.data.cards.map((el, index) => (
-            <div key={el.index}>
+            <div key={`card_tarot_${el.index}`}>
               <Image
                 key={index * 0.02}
                 src={`/cards/deck/${el.index}.jpg`}

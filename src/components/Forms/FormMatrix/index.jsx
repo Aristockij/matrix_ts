@@ -57,16 +57,33 @@ const FormMatrix = () => {
           date: "",
         }}
         validationSchema={validation}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            router.push(
-              `/matrixa_preview?name=${values.name}&birthDate=${
-                values.date
-              }&isPerson=${"true"}`
-            );
+        onSubmit={(values) => {
+          try {
+            const val = {
+              userItemId: valueMatrix.userItemId,
+              name: values.name,
+              birthDate: values.date,
+              name2: null,
+              birthDate2: null,
+              serviceCode: "PERSONAL_MATRIX",
+            };
 
-            setSubmitting(false);
-          }, 400);
+            console.log("counterItem: ", val);
+
+            if (isPayd) {
+              isPay(val);
+            } else {
+              router.push(
+                `/matrixa_preview?name=${values.name}&birthDate=${
+                  values.date
+                }&isPerson=${"true"}`
+              );
+
+              setSubmitting(false);
+            }
+          } catch (err) {
+            console.log(err);
+          }
         }}
       >
         {({ values, isSubmitting }) => (

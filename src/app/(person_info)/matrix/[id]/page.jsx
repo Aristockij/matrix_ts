@@ -1,7 +1,11 @@
+"use client";
+
 import BtnsLinks from "../../../../components/BtnsLinks";
 import s from "../../index.module.scss";
 import PersonMatrix from "../../../../components/MatrixInfo/PersonMatrix";
 import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
+import { useGetCalculationDetail } from "@/hooks/useGetCalculationDetail";
 
 const page = () => {
   const t = useTranslations("PersonMatrix");
