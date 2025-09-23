@@ -1,22 +1,24 @@
 import s from "./index.module.scss";
+import { useTranslations } from "next-intl";
 
 const index = ({ data }) => {
-  return (
+  const t = useTranslations('ChakraSoc')
+
+  return ( 
     <div className={`${s.info__wrap} section section__wrap__sm`}>
       <div className={s.info}>
-        <h3>Поиск себя:</h3>
+        <h3>{t("h3_1")}</h3>
         <div>
-          Соединение мужского и женского. Выстраивание взаимоотношений.
-          Способности, навыки, умения.
+         {t('male_female')}
         </div>
         <div className={s.info__diag}>
           <div className={s.info__diag__left}>
             <div>
-              Небо
+              {t('sky')}
               <span className={s.circle}>{data.calc?.PURPOSE.SEARCH.SKY}</span>
             </div>
             <div>
-              Земля
+              {t('ground')}
               <span className={s.circle}>
                 {data.calc?.PURPOSE.SEARCH.EARTH}
               </span>
@@ -29,20 +31,20 @@ const index = ({ data }) => {
         </div>
       </div>
       <div className={s.info}>
-        <h3>Социализация:</h3>
+        <h3>{t('h3_2')}</h3>
         <div>
-          Социальная и родовая системы. Результаты и признание в социуме.
+          {t('subtitle_2')}
         </div>
         <div className={s.info__diag}>
           <div className={s.info__diag__left}>
             <div>
-              М
+              {t('male')}
               <span className={s.circle}>
                 {data.calc?.PURPOSE.SOCIALIZATION.MEN}
               </span>
             </div>
             <div>
-              Ж
+              {t('female')}
               <span className={s.circle}>
                 {data.calc?.PURPOSE.SOCIALIZATION.WOMEN}
               </span>
@@ -58,17 +60,17 @@ const index = ({ data }) => {
       </div>
       <div>
         <div className={s.subtitle}>
-          <span>Духовная гармония:</span>
+          <span>{t('spiryt')}</span>
           <span className={s.circle}>{data.calc?.PURPOSE.SPIRIT}</span>
         </div>
-        <div>Духовный зачет. Кто я для бога? Где божественное во мне?</div>
+        <div>{t('spiryt_sub')}</div>
       </div>
       <div>
         <div className={s.subtitle}>
-          <span>Планетарное:</span>
+          <span>{t("planet")}</span>
           <span className={s.circle}>{data.calc?.PURPOSE.PLANETARY}</span>
         </div>
-        <div>Планетарное предназначение человека</div>
+        <div>{t("planet_sub")} </div>
       </div>
     </div>
   );

@@ -61,7 +61,9 @@ const Tariffs = () => {
           <div className={s.wrapper}>
             <div>
               <div className={s.title}>{props.info.name}</div>
-              <div className={s.price}>{props.info.cost}</div>
+              <div className={s.price}>
+                {props.info.cost} {locale === "en" ? "$" : "руб."}
+              </div>
             </div>
 
             <div>

@@ -527,5 +527,19 @@
       "5": "I confirm that I am familiar with the provisions of the Federal Law of the Russian Federation No. 152-FZ of 27.07.2006 “On Personal Data”, and my rights and obligations in the field of personal data protection have been explained to me.",
       "6": "I have been informed that the Operator is entitled to continue processing my personal data without my consent in cases provided for by the legislation of the Russian Federation."
     }
+  },
+  "ChakraSoc": {
+    "h3_1": "Self-discovery: ",
+    "male_female": "Union of masculine and feminine. Building relationships. Abilities, skills, competencies.",
+    "sky": "Sky",
+    "ground": "Earth",
+    "h3_2": "Socialization: ",
+    "subtitle_2": "Social and ancestral systems. Results and recognition in society.",
+    "male": "M",
+    "female": "F",
+    "spiryt": "Spiritual harmony: ",
+    "spityt_sub": "Spiritual assessment. Who am I for God? Where is the divine within me?",
+    "planet:": "Planetary:",
+    "planet_sub": "Planetary purpose of a human being"
   }
 }
