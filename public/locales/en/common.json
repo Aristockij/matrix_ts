@@ -96,7 +96,7 @@
         "title": "Three Cards layout is ready",
         "subtitle": "To gain access to the spread, purchase a subscription",
         "submit": "I want to buy a spread",
-        "submit_left": "Осталось"
+        "submit_left": "total: "
       }
     },
     "Tarot": {
@@ -230,9 +230,9 @@
   },
   "Footer": {
     "person": {
-      "ip": "IP Firsanov Ivan Alexandrovich",
-      "inn": "TIN 780733499246",
-      "og": "OGRNIP 322784700234631"
+      "ip": "Empresário em Nome Individual: Daria Firsanova ",
+      "inn": "NIF: 327680075",
+      "og": ""
     },
     "docs": {
       "of": "Offer",
@@ -539,7 +539,13 @@
     "female": "F",
     "spiryt": "Spiritual harmony: ",
     "spityt_sub": "Spiritual assessment. Who am I for God? Where is the divine within me?",
-    "planet:": "Planetary:",
+    "planet": "Planetary:",
     "planet_sub": "Planetary purpose of a human being"
+  },
+  "ChakraSchema": {
+    "age": "years",
+    "zone": "comfort zone",
+    "male": "masculine line",
+    "female": "femenini line"
   }
 }

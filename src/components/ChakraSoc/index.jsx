@@ -2,23 +2,21 @@ import s from "./index.module.scss";
 import { useTranslations } from "next-intl";
 
 const index = ({ data }) => {
-  const t = useTranslations('ChakraSoc')
+  const t = useTranslations("ChakraSoc");
 
-  return ( 
+  return (
     <div className={`${s.info__wrap} section section__wrap__sm`}>
       <div className={s.info}>
         <h3>{t("h3_1")}</h3>
-        <div>
-         {t('male_female')}
-        </div>
+        <div>{t("male_female")}</div>
         <div className={s.info__diag}>
           <div className={s.info__diag__left}>
             <div>
-              {t('sky')}
+              {t("sky")}
               <span className={s.circle}>{data.calc?.PURPOSE.SEARCH.SKY}</span>
             </div>
             <div>
-              {t('ground')}
+              {t("ground")}
               <span className={s.circle}>
                 {data.calc?.PURPOSE.SEARCH.EARTH}
               </span>
@@ -31,20 +29,18 @@ const index = ({ data }) => {
         </div>
       </div>
       <div className={s.info}>
-        <h3>{t('h3_2')}</h3>
-        <div>
-          {t('subtitle_2')}
-        </div>
+        <h3>{t("h3_2")}</h3>
+        <div>{t("subtitle_2")}</div>
         <div className={s.info__diag}>
           <div className={s.info__diag__left}>
             <div>
-              {t('male')}
+              {t("male")}
               <span className={s.circle}>
                 {data.calc?.PURPOSE.SOCIALIZATION.MEN}
               </span>
             </div>
             <div>
-              {t('female')}
+              {t("female")}
               <span className={s.circle}>
                 {data.calc?.PURPOSE.SOCIALIZATION.WOMEN}
               </span>
@@ -60,10 +56,10 @@ const index = ({ data }) => {
       </div>
       <div>
         <div className={s.subtitle}>
-          <span>{t('spiryt')}</span>
+          <span>{t("spiryt")}</span>
           <span className={s.circle}>{data.calc?.PURPOSE.SPIRIT}</span>
         </div>
-        <div>{t('spiryt_sub')}</div>
+        <div>{t("spityt_sub")}</div>
       </div>
       <div>
         <div className={s.subtitle}>

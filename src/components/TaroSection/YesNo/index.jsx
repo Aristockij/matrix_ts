@@ -128,7 +128,13 @@ const YesNo = () => {
       </div>
 
       <PopupContainer OpenPopup={openPopup} ClosePopup={closePopup}>
-        <AnswerQuestion />
+        <AnswerQuestion
+          closePopup={closePopup}
+          errorMessage={errorMessage}
+          data={dataAnswer}
+          serviceCode={"TARO_SPREAD"}
+          value={value}
+        />
       </PopupContainer>
     </>
   );
