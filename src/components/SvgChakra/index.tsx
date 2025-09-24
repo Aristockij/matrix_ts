@@ -1,10 +1,10 @@
 import { useTranslations } from "next-intl";
 
-const Index = ({ data }) => {
+const Index = ({ data }: any) => {
   const t = useTranslations("ChakraSchema");
 
-  const cx = (x, w) => x + w / 2;
-  const cy = (y, h) => y + h / 2;
+  const cx = (x: number, w: number) => x + w / 2;
+  const cy = (y: number, h: number) => y + h / 2;
 
   return (
     <>
